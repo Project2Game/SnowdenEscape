@@ -29,6 +29,7 @@
 
 // grav is our own variable, not editing the game's default "gravity"
 //Chase was here
+//Pulling once
 grav = 0.2;     // gravity
 hsp = 0;        // horizontal speed
 hsp_carry = 0;  // carry over from moving platform hsp
