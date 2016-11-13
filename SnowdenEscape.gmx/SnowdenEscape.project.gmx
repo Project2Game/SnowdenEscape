@@ -49,6 +49,9 @@
     <object>objects\obj_door</object>
     <object>objects\obj_guard</object>
     <object>objects\obj_key</object>
+    <object>objects\obj_pipe_L</object>
+    <object>objects\obj_pipe_cross</object>
+    <object>objects\obj_pipe_line</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_splash</room>
