@@ -7,26 +7,19 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_wall</sprite>
-<<<<<<< HEAD
     <sprite>sprites\spr_player_right</sprite>
     <sprite>sprites\spr_player_left</sprite>
     <sprite>sprites\spr_player_up</sprite>
     <sprite>sprites\spr_player_down</sprite>
-=======
-    <sprite>sprites\spr_screen</sprite>
->>>>>>> b3b2a6593c1e03f401adea442b818325f45f0908
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <fonts name="fonts">
-    <font>fonts\fnt_screen_text</font>
-  </fonts>
   <objects name="objects">
     <object>objects\obj_wall</object>
-    <object>objects\obj_screen</object>
+    <object>objects\obj_edward</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_terminal</room>
+    <room>rooms\rm_lvl_1</room>
     <room>rooms\rm_splash</room>
   </rooms>
   <help>
