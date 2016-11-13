@@ -76,7 +76,12 @@ if(random_text==1) {
         }
         phrase = "";
         for(i=0;i&lt;110-round(random(80));i++) {
-            phrase += string(choose("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",1,2,3,4,5,6,7,8,9,0));
+            
+            phrase_option1 = string(choose("a","b","c","d","e","f","g","h","i","j","k","l"));
+            phrase_option2 = string(choose("m","n","o","p","q","r","s","t","u","v","w","x"));
+            phrase_option3 = string(choose("y","z",1,2,3,4,5,6,7,8,9,0));
+            phrase += string(choose(phrase_option1,phrase_option2,phrase_option3));
+            //phrase += string(choose("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",1,2,3,4,5,6,7,8,9,0));
         }
         string_line[line-1] = phrase;
     }
