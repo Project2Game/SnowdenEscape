@@ -12,9 +12,29 @@
     <sprite>sprites\spr_player_up</sprite>
     <sprite>sprites\spr_player_down</sprite>
     <sprite>sprites\spr_screen</sprite>
+    <sprite>sprites\spr_file_cabinet</sprite>
+    <sprite>sprites\spr_bookcase</sprite>
+    <sprite>sprites\spr_desk</sprite>
+    <sprite>sprites\spr_pc</sprite>
+    <sprite>sprites\spr_door</sprite>
+    <sprite>sprites\spr_guard_up</sprite>
+    <sprite>sprites\spr_guard_down</sprite>
+    <sprite>sprites\sprr_guard_left</sprite>
+    <sprite>sprites\spr_guard_right</sprite>
+    <sprite>sprites\spr_key</sprite>
+    <sprite>sprites\spr_pipe_cross</sprite>
+    <sprite>sprites\spr_pipe_line</sprite>
+    <sprite>sprites\spr_pipe_L</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_terminal</background>
+  </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_splash_menu.gml</script>
+    <script>scripts\scr_pause.gml</script>
+    <script>scripts\scr_rotate_90.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_screen_text</font>
   </fonts>
@@ -22,11 +42,18 @@
     <object>objects\obj_wall</object>
     <object>objects\obj_edward</object>
     <object>objects\obj_screen</object>
+    <object>objects\obj_file_cabinet</object>
+    <object>objects\obj_bookcase</object>
+    <object>objects\obj_desk</object>
+    <object>objects\obj_pc</object>
+    <object>objects\obj_door</object>
+    <object>objects\obj_guard</object>
+    <object>objects\obj_key</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_splash</room>
     <room>rooms\rm_terminal</room>
     <room>rooms\rm_lvl_1</room>
-    <room>rooms\rm_splash</room>
     <room>rooms\rm_hack_game</room>
   </rooms>
   <help>
