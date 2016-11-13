@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>text = "admin@nsa:~$ "
+            <string>header_text = "admin@nsa:~$ "
+typed_text = "";
 </string>
           </argument>
         </arguments>
@@ -50,19 +51,20 @@
             <kind>1</kind>
             <string>if (keyboard_lastkey != -1) {
    if(keyboard_lastkey==vk_enter) {
-        text += keyboard_lastchar+"admin@nsa:~$ ";
+        header_text = header_text + typed_text + keyboard_lastchar+"admin@nsa:~$ ";
+        typed_text = "";
         keyboard_lastkey = -1;
    }
    
    else if(keyboard_lastkey==vk_backspace) {
          {
-            text = string_delete(text,string_length(text),1);
+            typed_text = string_delete(typed_text,string_length(typed_text),1);
             keyboard_lastkey = -1;
         }
    
    }
    else {
-        text += keyboard_lastchar;
+        typed_text += keyboard_lastchar;
         keyboard_lastkey = -1;
    }
 }
@@ -96,7 +98,7 @@ draw_set_valign(fa_top);
 draw_set_color(c_green);
 draw_set_font(fnt_screen_text);
 
-
+text = string(header_text) + string(typed_text);
 draw_text(x,y,text);
 
 </string>
