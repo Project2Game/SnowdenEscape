@@ -7,14 +7,10 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_wall</sprite>
-<<<<<<< HEAD
     <sprite>sprites\spr_player_right</sprite>
     <sprite>sprites\spr_player_left</sprite>
     <sprite>sprites\spr_player_up</sprite>
     <sprite>sprites\spr_player_down</sprite>
-=======
-    <sprite>sprites\spr_screen</sprite>
->>>>>>> 1034606c1183970fae0c7dff6c9e131b25f849fc
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
