@@ -25,6 +25,7 @@
     <sprite>sprites\spr_pipe_cross</sprite>
     <sprite>sprites\spr_pipe_line</sprite>
     <sprite>sprites\spr_pipe_L</sprite>
+    <sprite>sprites\spr_document</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_terminal</background>
@@ -52,6 +53,7 @@
     <object>objects\obj_pipe_L</object>
     <object>objects\obj_pipe_cross</object>
     <object>objects\obj_pipe_line</object>
+    <object>objects\obj_document</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_splash</room>
