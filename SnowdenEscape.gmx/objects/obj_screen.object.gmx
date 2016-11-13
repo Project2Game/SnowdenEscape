@@ -54,7 +54,13 @@
         keyboard_lastkey = -1;
    }
    
+   else if(keyboard_lastkey==vk_backspace) {
+         {
+            text = string_delete(text,string_length(text),1);
+            keyboard_lastkey = -1;
+        }
    
+   }
    else {
         text += keyboard_lastchar;
         keyboard_lastkey = -1;
