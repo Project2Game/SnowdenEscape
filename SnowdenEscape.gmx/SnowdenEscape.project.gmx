@@ -54,12 +54,16 @@
     <object>objects\obj_pipe_cross</object>
     <object>objects\obj_pipe_line</object>
     <object>objects\obj_document</object>
+    <object>objects\obj_pause</object>
+    <object>objects\obj_splash_menu</object>
+    <object>objects\obj_howto</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_splash</room>
     <room>rooms\rm_terminal</room>
     <room>rooms\rm_lvl_1</room>
     <room>rooms\rm_hack_game</room>
+    <room>rooms\rm_howto</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
