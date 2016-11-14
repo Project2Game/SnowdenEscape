@@ -26,12 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>/// Set menu options
-options[0] = "Play";
-options[1] = "Terminal";
+options[0] = "Resume";
+options[1] = "Menu";
 options[2] = "Quit";
 
-spacing = 64;        // spacing between each line
-selection = 0;  // menu item selection starts on option 0
+spacing = 64;       // spacing between each line
+selection = 0;      // menu item selection starts on option 0
+
+global.pause = 0;   // initialize pause
 </string>
           </argument>
         </arguments>
@@ -73,7 +75,7 @@ if (move != 0) {
 var select;
 select = max(keyboard_check_released(vk_enter), keyboard_check_released(vk_space),0);
 
-if ( select == 1 ) scr_splash_menu(selection); // if select true
+if ( select == 1 ) scr_pause(selection); // if select true
 </string>
           </argument>
         </arguments>
@@ -96,25 +98,47 @@ if ( select == 1 ) scr_splash_menu(selection); // if select true
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Draw the options onto the menu room.
-draw_set_halign(fa_left);
-draw_set_valign(fa_top);
-draw_set_font(fnt_screen_text);
-draw_set_color(c_lime);
+            <string>/// Draw pause screen
+if (global.pause) {
+    draw_set_font(fnt_screen_text);
+    draw_set_color(c_black);
+    draw_set_alpha(0.5);
+    draw_rectangle(0,0,room_width, room_height, 0);
+    draw_set_color(c_lime);
+    draw_set_alpha(1);
+    
+    /// Draw the title
+//    var title = "GAME PAUSED";
+//    draw_set_font(fnt_screen_text);
+//    draw_set_color(c_lime);
 
-// Draw menu options
-for ( var i = 0; i &lt; array_length_1d(options); i += 1 ) {
-    draw_text_transformed(x + spacing, y + (i * spacing), string(options[i]), 1.5, 1.5, image_angle);
-//    draw_text(x + spacing, y + (i * spacing), string( options[i] ));
+//    draw_text_transformed(room_width / 3, room_height / 5, title, 3, 3, image_angle);
+    
+    // Print GAME PAUSED
+    X = room_width / 2.75
+    Y = room_height / 2.25
+    draw_text(X, Y,"GAME PAUSED"); 
+    
+    // Print options    
+    draw_set_halign(fa_left);
+    
+    pause_btns[0] = "r - restart game";
+    pause_btns[1] = "m - go to menu";
+    pause_btns[2] = "q - quit game";
+    pause_btns[3] = "esc - unpause";
+
+    var spacing = 40;        // spacing between each line
+    
+    for (var i = 1; i &lt;= array_length_1d(pause_btns); i += 1 ) {
+        draw_text(X, Y + (i * spacing), string( pause_btns[i-1] ));
+    }
 }
-
-// Draw the selector
-draw_sprite(spr_selector, -1, x+16, y+selection * spacing);
-image_speed = 0.05;
 </string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="9" enumb="27">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -131,12 +155,14 @@ image_speed = 0.05;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Draw the title
-var title = "Snowden Escape";
-draw_set_font(fnt_screen_text);
-draw_set_color(c_lime);
-
-draw_text_transformed(room_width / 3, room_height / 5, title, 3, 3, image_angle);
+            <string>/// Pause / Unpause
+if (global.pause == 0) {
+    global.pause = 1;
+    instance_deactivate_all(true);
+} else {
+    global.pause = 0;
+    instance_activate_all();
+}
 </string>
           </argument>
         </arguments>
