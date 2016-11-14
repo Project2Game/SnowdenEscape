@@ -26,21 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>read = 0;
-
-content_list[0] = "Verizon keeps cell phone records of almost all customers for years.";
-content_list[1] = "The CIA creates a web of influence for each individual by sniffing all of your social media connections.";
-content_list[2] = "The CIA requires Google to cache all images uploaded, along with the source IP.";
-
-for (var i = 0; i &lt; instance_count; i += 1;) {
-    with (instance_id) content = content_list[i];
-}
-
-
-/*
-trying to index a variable which is not an array
- at gml_Object_obj_document_CreateEvent_1 (line 7) -     with (instance_id[i]) content = content_list[i];
-############################################################################################
-*/
 </string>
           </argument>
         </arguments>
@@ -63,12 +48,20 @@ trying to index a variable which is not an array
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Collsion with player and transitioning to terminal room
+            <string>/*
+///Collsion with player and transitioning to terminal room
 if (distance_to_object(obj_edward) &lt; 10) {
-    if(keyboard_check_pressed(ord('F'))) reading = 1;
+    if(keyboard_check_pressed(ord('F'))) {
+        reading = 1;
+        show_debug_message('Reading document'+string(id));
+    } else {
+        reading = 0;
+    }
+    
 } else {
     reading = 0;
 }
+*/
 </string>
           </argument>
         </arguments>
@@ -91,7 +84,9 @@ if (distance_to_object(obj_edward) &lt; 10) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Collsion with PC and transitioning to terminal room
+            <string>
+//Collsion with PC and transitioning to terminal room
+/*
 if (distance_to_object(obj_pc) &lt; 10) {
     if(keyboard_check_pressed(ord('F'))){
         global.terminal = 1;
@@ -99,13 +94,15 @@ if (distance_to_object(obj_pc) &lt; 10) {
         room_goto(rm_terminal);
     }
 }
+*/
+draw_self();
 </string>
           </argument>
         </arguments>
       </action>
     </event>
   </events>
-  <PhysicsObject>-1</PhysicsObject>
+  <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
@@ -116,8 +113,5 @@ if (distance_to_object(obj_pc) &lt; 10) {
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints>
-    <point>10,13</point>
-    <point>13,13</point>
-  </PhysicsShapePoints>
+  <PhysicsShapePoints/>
 </object>
