@@ -60,6 +60,7 @@
 if (distance_to_object(obj_pc) &lt; 10) {
     if(keyboard_check_pressed(ord('F'))){
         global.terminal = 1;
+        
         room_goto(rm_terminal);
     }
 }
