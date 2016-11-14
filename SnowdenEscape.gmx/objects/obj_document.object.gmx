@@ -3,7 +3,7 @@
   <spriteName>spr_document</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,14 +25,28 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>depth = -1000;
+            <string>
+content_list[0] = "Verizon keeps cell phone records of almost all customers for years.";
+content_list[1] = "The CIA creates a web of influence for each individual by sniffing all of your social media connections.";
+content_list[2] = "The CIA requires Google to cache all images uploaded, along with the source IP.";
+
+for (var i = 0; i &lt; instance_count; i += 1;) {
+    with (instance_id) content = content_list[i];
+}
+
+
+/*
+trying to index a variable which is not an array
+ at gml_Object_obj_document_CreateEvent_1 (line 7) -     with (instance_id[i]) content = content_list[i];
+############################################################################################
+*/
 </string>
           </argument>
         </arguments>
       </action>
     </event>
   </events>
-  <PhysicsObject>0</PhysicsObject>
+  <PhysicsObject>-1</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
@@ -43,5 +57,8 @@
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>10,13</point>
+    <point>13,13</point>
+  </PhysicsShapePoints>
 </object>

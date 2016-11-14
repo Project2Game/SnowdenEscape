@@ -37,8 +37,15 @@ terminal = string_count('terminal', room_get_name(room));
 minigame = string_count('hack', room_get_name(room));
 level    = string_count('lvl', room_get_name(room));
 
-if (level) spacing = 32;
-else spacing = 64;
+if (level) {
+    spacing = 32;
+} else {
+    spacing = 64;
+    X = 0;
+    Y = 0;   
+}
+
+title = "GAME PAUSED";
 </string>
           </argument>
         </arguments>
@@ -119,14 +126,8 @@ if (global.pause &amp;&amp; level) {
     draw_set_alpha(1);
     
     /// Draw the title.
-    var title = "GAME PAUSED";
     draw_set_font(fnt_screen_text);
     draw_set_color(c_lime);
-    
-    show_debug_message('View width=' + string(view_width));
-    show_debug_message('View height=' + string(view_height));
-    show_debug_message('X=' + string(X));
-    show_debug_message('Y=' + string(Y));
     
     // Draw Title
     draw_text_transformed(X+(view_width/3), Y+(view_height/5), title, 1.5, 1.5, image_angle);
@@ -177,17 +178,8 @@ if ( global.pause &amp;&amp; (terminal || minigame) ) {
     draw_set_alpha(1);
     
     /// Draw the title.
-    var title = "GAME PAUSED";
     draw_set_font(fnt_screen_text);
     draw_set_color(c_lime);
-
-    X = 0;
-    Y = 0;
-    
-    show_debug_message('View width=' + string(room_width));
-    show_debug_message('View height=' + string(room_height));
-    show_debug_message('X=' + string(X));
-    show_debug_message('Y=' + string(Y));
     
     // Draw Title
     draw_text_transformed(X+(room_width/3), Y+(room_height/5), title, 3, 3, image_angle);
