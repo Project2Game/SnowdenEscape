@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>key = 'hack.exe';
+            <string>key = 'encrypt.exe';
 exit_key = "exit";
 key_found = 0;
 header_text = "admin@nsa:~$ "
@@ -45,7 +45,9 @@ random_text_c = 0;
 another_room = 0;
 string_line[0] = 'Welcome to your terminal. From here you can:';
 line++;
-string_line[1] = '1. Encrpyt collected documents by typing "encrypt.exe"';
+string_line[1] = '1. Encrypt collected documents by typing "encrypt.exe"';
+line++;
+string_line[2] = '2. More to come later...';
 line++;
 wait = 0;
 </string>
@@ -228,6 +230,17 @@ else {
     }
     else if(global.solved==1) {
         another_room = 0;
+        string_line[line-1] = "Encryption of files completed";
+        line++;
+        if(line&gt;30) {
+            for(i=0;i&lt;29;i++) {
+                string_line[i] = string_line[i+1];
+            }
+            line = line-1;
+        }
+        typed_text = "";
+        string_line[line-1] = header_text;
+        wait = 0;
     }
 }
 </string>

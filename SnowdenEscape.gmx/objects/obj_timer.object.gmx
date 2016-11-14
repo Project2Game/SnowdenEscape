@@ -28,6 +28,7 @@
             <string>second = 30;
 msec = 0;
 stop = 0;
+timer_done = 0;
 </string>
           </argument>
         </arguments>
@@ -50,19 +51,25 @@ stop = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(stop==0) {
-    msec = msec - 91;
+            <string>if((stop==0)&amp;&amp;(timer_done==0)) {
+    msec = msec - 17;
     if(msec&lt;0) {
         second--;
         msec+=1000;
     }
     if(second&lt;0) {
-        stop = 1;
+        timer_done = 1;
     }
 }
 else {
-    global.solved = -1;
-    room_goto(rm_terminal);
+    if(timer_done==1) {
+        global.solved = -1;
+        room_goto(rm_terminal);
+    }
+    else if(stop==1) {
+        global.solved = 1;
+        room_goto(rm_terminal);
+    }
 }
 </string>
           </argument>
