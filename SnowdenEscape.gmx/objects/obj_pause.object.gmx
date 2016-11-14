@@ -104,7 +104,7 @@ else spacing = 64;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Draw pause screen for levels.
+            <string>/// Level pause screen.
 if (global.pause &amp;&amp; level) {
     X = view_xview[0];
     Y = view_yview[0];
@@ -114,7 +114,7 @@ if (global.pause &amp;&amp; level) {
     // Draw screen overlay.
     draw_set_font(fnt_screen_text);
     draw_set_color(c_black);
-    draw_set_alpha(0.5);
+    draw_set_alpha(0.75);
     draw_rectangle(0,0,room_width, room_height, 0);
     draw_set_alpha(1);
     
@@ -167,12 +167,12 @@ if (global.pause &amp;&amp; level) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Pause for terminals/minigames.
+            <string>/// Terminal/minigame pause screen.
 if ( global.pause &amp;&amp; (terminal || minigame) ) {
     // Draw screen overlay.
     draw_set_font(fnt_screen_text);
     draw_set_color(c_black);
-    draw_set_alpha(0.5);
+    draw_set_alpha(0.75);
     draw_rectangle(0,0,room_width, room_height, 0);
     draw_set_alpha(1);
     
