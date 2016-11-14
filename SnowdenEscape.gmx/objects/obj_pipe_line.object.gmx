@@ -65,6 +65,40 @@ var pipe_orientation = position_line;
 var pipe_x = x;
 var pipe_y = y;
 var connected = 0
+
+
+with(obj_pipe_L) {
+    if(pipe_orientation==1) {
+    //Check if above pipe_L is vertical
+        if((x==pipe_x)&amp;&amp;(y==pipe_y-92)) {
+            if(position_L&gt;=2) {
+                connected = 1;
+            }
+            
+        }
+    //Check if below pipe is vertical
+        if((x==pipe_x)&amp;&amp;(y==pipe_y+92)) {
+            if(position_L&lt;=1) {
+                connected = 1;
+            }
+        }
+    }
+    else {
+        //Check if right pipe is horizontal
+        if((x==pipe_x+92)&amp;&amp;(y==pipe_y)) {
+            if((position_L==1)||(position_L==2)) {
+                connected = 1;
+            }
+        }
+        //Check if left pipe is horizontal
+        if((x==pipe_x-92)&amp;&amp;(y==pipe_y)) {
+            if((position_L==0)||(position_L==3)) {
+                connected = 1;
+            }
+        }
+    }
+
+}
 with(obj_pipe_line) {
     if(pipe_orientation==1) {
     //Check if above pipe is vertical
@@ -98,7 +132,7 @@ with(obj_pipe_line) {
 }
 var angle = image_angle;
 if(connected == 1) {
-    sprite_index = spr_pipe_cross;
+    sprite_index = spr_pipe_line_g;
 }
 else {
     sprite_index = spr_pipe_line;
