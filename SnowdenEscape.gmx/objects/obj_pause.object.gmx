@@ -30,10 +30,15 @@ options[0] = "Resume";
 options[1] = "Menu";
 options[2] = "Quit";
 
-spacing = 16;       // spacing between each line
 selection = 0;      // menu item selection starts on option 0
-
 global.pause = 0;   // initialize pause
+
+terminal = string_count('terminal', room_get_name(room));
+minigame = string_count('hack', room_get_name(room));
+level    = string_count('lvl', room_get_name(room));
+
+if (level) spacing = 32;
+else spacing = 64;
 </string>
           </argument>
         </arguments>
@@ -56,25 +61,27 @@ global.pause = 0;   // initialize pause
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Move the selector up and down the menu.
-var move = 0;
-
-// If the user presses UP or W, move down the menu.
-move -= max(keyboard_check_pressed(vk_up), keyboard_check_pressed(ord("W")), 0);
-
-// If the user presses DOWN or S, move down the menu.
-move += max(keyboard_check_pressed(vk_down), keyboard_check_pressed(ord("S")), 0);
-
-if (move != 0) {
-    // Add or subtract one from the menu. Use as a circular list.
-    selection += move;
-    if ( selection &lt; 0 ) selection = array_length_1d(options) - 1;
-    if ( selection &gt; (array_length_1d(options) - 1) ) selection = 0;
+            <string>if (global.pause) {
+    /// Move the selector up and down the menu.
+    var move = 0;
+    
+    // If the user presses UP or W, move down the menu.
+    move -= max(keyboard_check_pressed(vk_up), keyboard_check_pressed(ord("W")), 0);
+    
+    // If the user presses DOWN or S, move down the menu.
+    move += max(keyboard_check_pressed(vk_down), keyboard_check_pressed(ord("S")), 0);
+    
+    if (move != 0) {
+        // Add or subtract one from the menu. Use as a circular list.
+        selection += move;
+        if ( selection &lt; 0 ) selection = array_length_1d(options) - 1;
+        if ( selection &gt; (array_length_1d(options) - 1) ) selection = 0;
+    }
+    
+    var select = max(keyboard_check_released(vk_enter), keyboard_check_released(vk_space),0);
+    
+    if ( select == 1 ) scr_pause(selection); // if select true
 }
-
-var select = max(keyboard_check_released(vk_enter), keyboard_check_released(vk_space),0);
-
-if ( select == 1 ) scr_pause(selection); // if select true
 </string>
           </argument>
         </arguments>
@@ -97,37 +104,39 @@ if ( select == 1 ) scr_pause(selection); // if select true
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Draw pause screen
-if (global.pause) {
+            <string>/// Draw pause screen for levels.
+if (global.pause &amp;&amp; level) {
+    X = view_xview[0];
+    Y = view_yview[0];
+    view_width  = view_wview[0];
+    view_height = view_hview[0];    // view_hport[0]?
+
     // Draw screen overlay.
     draw_set_font(fnt_screen_text);
     draw_set_color(c_black);
     draw_set_alpha(0.5);
-    draw_rectangle(0,0,1024, 704, 0);
+    draw_rectangle(0,0,room_width, room_height, 0);
     draw_set_alpha(1);
     
     /// Draw the title.
     var title = "GAME PAUSED";
     draw_set_font(fnt_screen_text);
     draw_set_color(c_lime);
-
-    view_width = view_wview[0];     //view_hport[0];
-    view_height = view_hview[0];    //view_wport[0];
-    X = view_xview[0];
-    Y = view_yview[0]; // view_yport?
     
     show_debug_message('View width=' + string(view_width));
     show_debug_message('View height=' + string(view_height));
+    show_debug_message('X=' + string(X));
+    show_debug_message('Y=' + string(Y));
     
     // Draw Title
-    draw_text_transformed(X+(view_width/3.5), Y+(view_height/5), title, 2, 2, image_angle);
+    draw_text_transformed(X+(view_width/3), Y+(view_height/5), title, 1.5, 1.5, image_angle);
     
     /// Draw the options onto the menu room.
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
     
-    X = X + (view_width/3.25)
-    Y = Y + (view_width/4.25)
+    X = X + (view_width/3);
+    Y = Y + (view_width/3);
     
     // Draw menu options
     for ( var i = 0; i &lt; array_length_1d(options); i += 1 ) {
@@ -135,8 +144,68 @@ if (global.pause) {
     }
     
     // Draw the selector
-//    draw_sprite(spr_selector, -1, X, Y+selection * spacing);
-    draw_sprite_ext( spr_selector, -1, X, Y + (selection*spacing), 0.5, 0.5, image_angle, c_lime, 1 );
+    draw_sprite_ext(spr_selector, -1, X, Y+(selection*spacing), 0.5, 0.5, image_angle, c_lime, 1);
+    image_speed = 0.05;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Pause for terminals/minigames.
+if ( global.pause &amp;&amp; (terminal || minigame) ) {
+    // Draw screen overlay.
+    draw_set_font(fnt_screen_text);
+    draw_set_color(c_black);
+    draw_set_alpha(0.5);
+    draw_rectangle(0,0,room_width, room_height, 0);
+    draw_set_alpha(1);
+    
+    /// Draw the title.
+    var title = "GAME PAUSED";
+    draw_set_font(fnt_screen_text);
+    draw_set_color(c_lime);
+
+    X = 0;
+    Y = 0;
+    
+    show_debug_message('View width=' + string(room_width));
+    show_debug_message('View height=' + string(room_height));
+    show_debug_message('X=' + string(X));
+    show_debug_message('Y=' + string(Y));
+    
+    // Draw Title
+    draw_text_transformed(X+(room_width/3), Y+(room_height/5), title, 3, 3, image_angle);
+    
+    /// Draw the options onto the menu room.
+    draw_set_halign(fa_left);
+    draw_set_valign(fa_top);
+    
+    X = X + (room_width/3);
+    Y = Y + (room_width/3);
+    
+    // Draw menu options
+    for ( var i = 0; i &lt; array_length_1d(options); i += 1 ) {
+        draw_text_transformed(X + spacing, Y + (i * spacing), string(options[i]), 1.5, 1.5, image_angle);
+    }
+    
+    // Draw the selector
+    draw_sprite_ext(spr_selector, -1, X, Y+(selection*spacing), 1, 1, image_angle, c_lime, 1);
     image_speed = 0.05;
 }
 </string>
