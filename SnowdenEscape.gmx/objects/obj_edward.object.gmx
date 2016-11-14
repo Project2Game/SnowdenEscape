@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>wall_buffer = 1;
+</string>
           </argument>
         </arguments>
       </action>
@@ -47,9 +48,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-//Collsion with PC and transitioning to terminal room
+            <string>//CODE FOR DEBUG
+    if(keyboard_check_pressed(ord('L'))){
+    instance_destroy();
 
+    }   
+//-------------------------------------------------------------    
+    
+    
+//Collsion with PC and transitioning to terminal room
 if (distance_to_object(obj_pc) &lt; 10) {
     if(keyboard_check_pressed(ord('F'))){
         global.terminal = 1;
@@ -57,30 +64,31 @@ if (distance_to_object(obj_pc) &lt; 10) {
     }
 }
 
-
-if ( place_meeting(x+hspeed-(sprite_width/2), y, obj_wall) ) {
-     while( !place_meeting(x+sign(hspeed) + 1, y, obj_wall) ) {
+/// Wall Collision 
+// Horizontal Collision
+if ( place_meeting(x+hspeed- wall_buffer, y, obj_wall) ) {
+     while( !place_meeting(x+sign(hspeed) - wall_buffer, y, obj_wall) ) {
         x += sign(hspeed);
      }
      hspeed = 0;
 }
 // Vertical Collision
-if ( place_meeting(x, y+vspeed-(sprite_height/2), obj_wall) ) {
-     while( !place_meeting(x, y + sign(vspeed) , obj_wall) ) {
+if ( place_meeting(x, y+vspeed- wall_buffer, obj_wall) ) {
+     while( !place_meeting(x, y + sign(vspeed) - wall_buffer, obj_wall) ) {
         y += sign(vspeed);
      }
      vspeed = 0;
 }
-
-if ( place_meeting(x+hspeed+(sprite_width/2), y, obj_wall) ) {
-     while( !place_meeting(x + sign(hspeed), y, obj_wall) ) {
+// Horizontal Collision
+if ( place_meeting(x+hspeed+ wall_buffer, y, obj_wall) ) {
+     while( !place_meeting(x + sign(hspeed) + wall_buffer , y, obj_wall) ) {
         x += sign(hspeed);
      }
      hspeed = 0;
 }
 // Vertical Collision
-if ( place_meeting(x, y+vspeed+(sprite_height/2), obj_wall) ) {
-     while( !place_meeting(x, y+sign(vspeed), obj_wall) ) {
+if ( place_meeting(x, y+vspeed+ wall_buffer, obj_wall) ) {
+     while( !place_meeting(x, y+sign(vspeed) + wall_buffer, obj_wall) ) {
         y += sign(vspeed);
      }
      vspeed = 0;
@@ -155,13 +163,13 @@ x += hspeed;
     <event eventtype="4" ename="obj_wall">
       <action>
         <libid>1</libid>
-        <id>101</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_move</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
@@ -169,11 +177,7 @@ x += hspeed;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>000010000</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
+            <string></string>
           </argument>
         </arguments>
       </action>
