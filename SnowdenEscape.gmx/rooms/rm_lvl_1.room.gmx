@@ -332,6 +332,7 @@
     <instance objName="obj_desk" x="768" y="288" name="inst_2745B2AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_desk" x="608" y="224" name="inst_67800942" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_desk" x="688" y="224" name="inst_979CD027" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_document" x="319" y="125" name="inst_FEC37DAD" locked="0" code="" scaleX="0.5" scaleY="0.479999989271164" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
