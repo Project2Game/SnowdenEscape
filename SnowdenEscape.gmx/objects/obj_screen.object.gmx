@@ -25,10 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>key = 'hack.exe target = "nsa/spying_files"';
+            <string>key = 'hack.exe';
 key_found = 0;
 header_text = "admin@nsa:~$ "
 typed_text = "";
+keyboard_key = -1;
 keyboard_string = "";
 line = 1;
 random_text = 0;
@@ -41,6 +42,31 @@ random_text_c = 0;
 
 }
 string_line[0] = string(header_text) + string(typed_text);
+wait = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>random_text = 0;
+room_goto(rm_hack_game);
 </string>
           </argument>
         </arguments>
@@ -63,8 +89,8 @@ string_line[0] = string(header_text) + string(typed_text);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>random_text_c++;
-
+            <string>/*
+random_text_c++;
 random_text_c = random_text_c%60;
 if(random_text==1) {
     if(random_text_c%random_text_constant==0) {
@@ -87,59 +113,79 @@ if(random_text==1) {
         string_line[line-1] = phrase;
     }
 }
-else {
-    if(key_found==0) {
-        if (keyboard_lastkey != -1) {
-               if(keyboard_lastkey==vk_enter) {
-                    if(typed_text==key) {
-                        key_found = 1;
-                    }
-                    else {
-                    line++;
-                    if(line&gt;30) {
-                        for(i=0;i&lt;29;i++) {
-                            string_line[i] = string_line[i+1];
-                        }
-                        line = line-1;
-                    }
-                    
-                    typed_text = "";
-                    string_line[line-1] = header_text + typed_text;
-                    
-                    keyboard_lastkey = -1;
-                    }
-                    
-               }
-               
-               else if(keyboard_lastkey==vk_backspace) {
-                     {
-                        typed_text = string_delete(typed_text,string_length(typed_text),1);
-                        keyboard_lastkey = -1;
-                        string_line[line-1] = header_text + typed_text;
-                    }
-               
-               }
-               else {
-                    typed_text += keyboard_string;
-                    keyboard_string = "";
-                    keyboard_lastkey = -1;
-                    string_line[line-1] = header_text + typed_text;
-               }
-        }
+*/
+if (wait==0) {
+    if(random_text==1) {
+        
+        key_found = 0;
+        keyboard_lastkey = -1;
+        keyboard_string = "";
     }
     else {
-        line++;
-        if(line&gt;30) {
-            for(i=0;i&lt;29;i++) {
-                string_line[i] = string_line[i+1];
+        if(key_found==0) {
+            if (keyboard_lastkey != -1) {
+                   if(keyboard_lastkey==vk_enter) {
+                        if(typed_text==key) {
+                            key_found = 1;
+                        }
+                        else {
+                        line++;
+                        if(line&gt;30) {
+                            for(i=0;i&lt;29;i++) {
+                                string_line[i] = string_line[i+1];
+                            }
+                            line = line-1;
+                        }
+                        
+                        typed_text = "";
+                        string_line[line-1] = header_text + typed_text;
+                        
+                        keyboard_lastkey = -1;
+                        }
+                        
+                   }
+                   
+                   else if(keyboard_lastkey==vk_backspace) {
+                         {
+                            typed_text = string_delete(typed_text,string_length(typed_text),1);
+                            keyboard_lastkey = -1;
+                            string_line[line-1] = header_text + typed_text;
+                        }
+                   
+                   }
+                   else {
+                        typed_text += keyboard_string;
+                        keyboard_string = "";
+                        keyboard_lastkey = -1;
+                        string_line[line-1] = header_text + typed_text;
+                   }
             }
-            line = line-1;
         }
-        string_line[line-1] = "Hacking into target directory...";
-        random_text = 1;
+        else {
+            line++;
+            if(line&gt;30) {
+                for(i=0;i&lt;29;i++) {
+                    string_line[i] = string_line[i+1];
+                }
+                line = line-1;
+            }
+            string_line[line-1] = "Hacking into target directory...";
+            line++;
+            if(line&gt;30) {
+                for(i=0;i&lt;29;i++) {
+                    string_line[i] = string_line[i+1];
+                }
+                line = line-1;
+            }
+            typed_text = "";
+            random_text = 1;
+            alarm[0] = 30;
+        }
     }
 }
+else {
 
+}
 </string>
           </argument>
         </arguments>
