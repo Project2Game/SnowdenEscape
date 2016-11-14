@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>key = 'hack.exe';
+exit_key = "exit";
 key_found = 0;
 header_text = "admin@nsa:~$ "
 typed_text = "";
@@ -41,7 +42,11 @@ random_text_constant = 2;
 random_text_c = 0;
 
 }
-string_line[0] = string(header_text) + string(typed_text);
+another_room = 0;
+string_line[0] = 'Welcome to your terminal. From here you can:';
+line++;
+string_line[1] = '1. Encrpyt collected documents by typing "encrypt.exe"';
+line++;
 wait = 0;
 </string>
           </argument>
@@ -66,7 +71,9 @@ wait = 0;
           <argument>
             <kind>1</kind>
             <string>random_text = 0;
+another_room = 1;
 room_goto(rm_hack_game);
+wait = 1;
 </string>
           </argument>
         </arguments>
@@ -114,6 +121,12 @@ if(random_text==1) {
     }
 }
 */
+if(another_room==1) {
+    keyboard_lastkey = -1;
+    keyboard_string = "";
+    if(global.terminal==1)
+        another_room=0;
+}
 if (wait==0) {
     if(random_text==1) {
         
@@ -125,7 +138,22 @@ if (wait==0) {
         if(key_found==0) {
             if (keyboard_lastkey != -1) {
                    if(keyboard_lastkey==vk_enter) {
-                        if(typed_text==key) {
+                        if(typed_text==exit_key) {
+                            another_room = 1;
+                            line++;
+                            if(line&gt;30) {
+                                for(i=0;i&lt;29;i++) {
+                                    string_line[i] = string_line[i+1];
+                                }
+                                line = line-1;
+                            }
+                        
+                            typed_text = "";
+                            string_line[line-1] = header_text + typed_text;
+                            keyboard_lastkey = -1;
+                            room_goto(rm_lvl_1);
+                        }
+                        else if(typed_text==key) {
                             key_found = 1;
                         }
                         else {
@@ -184,7 +212,23 @@ if (wait==0) {
     }
 }
 else {
-
+    if(global.solved==-1) {
+        another_room = 0;
+        string_line[line-1] = "Failed to encrypt the files";
+        line++;
+        if(line&gt;30) {
+            for(i=0;i&lt;29;i++) {
+                string_line[i] = string_line[i+1];
+            }
+            line = line-1;
+        }
+        typed_text = "";
+        string_line[line-1] = header_text;
+        wait = 0;
+    }
+    else if(global.solved==1) {
+        another_room = 0;
+    }
 }
 </string>
           </argument>

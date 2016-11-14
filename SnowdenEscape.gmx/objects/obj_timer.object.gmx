@@ -51,7 +51,7 @@ stop = 0;
           <argument>
             <kind>1</kind>
             <string>if(stop==0) {
-    msec = msec - 17;
+    msec = msec - 91;
     if(msec&lt;0) {
         second--;
         msec+=1000;
@@ -61,7 +61,7 @@ stop = 0;
     }
 }
 else {
-    global.solved = 0;
+    global.solved = -1;
     room_goto(rm_terminal);
 }
 </string>
