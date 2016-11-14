@@ -22,9 +22,13 @@
     <sprite>sprites\sprr_guard_left</sprite>
     <sprite>sprites\spr_guard_right</sprite>
     <sprite>sprites\spr_key</sprite>
+    <sprite>sprites\spr_selector</sprite>
     <sprite>sprites\spr_pipe_cross</sprite>
+    <sprite>sprites\spr_pipe_cross_g</sprite>
     <sprite>sprites\spr_pipe_line</sprite>
+    <sprite>sprites\spr_pipe_line_g</sprite>
     <sprite>sprites\spr_pipe_L</sprite>
+    <sprite>sprites\spr_pipe_L_g</sprite>
     <sprite>sprites\spr_document</sprite>
   </sprites>
   <backgrounds name="background">
@@ -38,6 +42,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_screen_text</font>
+    <font>fonts\fnt_title</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_wall</object>
@@ -54,13 +59,13 @@
     <object>objects\obj_pipe_cross</object>
     <object>objects\obj_pipe_line</object>
     <object>objects\obj_document</object>
-    <object>objects\obj_pause</object>
     <object>objects\obj_splash_menu</object>
+    <object>objects\obj_pause</object>
     <object>objects\obj_howto</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_lvl_1</room>
     <room>rooms\rm_splash</room>
+    <room>rooms\rm_lvl_1</room>
     <room>rooms\rm_terminal</room>
     <room>rooms\rm_hack_game</room>
     <room>rooms\rm_howto</room>
