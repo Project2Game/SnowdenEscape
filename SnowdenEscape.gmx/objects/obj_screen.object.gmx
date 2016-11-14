@@ -43,12 +43,22 @@ random_text_c = 0;
 
 }
 another_room = 0;
-string_line[0] = 'Welcome to your terminal. From here you can:';
+string_line[0] = 'Welcome to your terminal. From here you can encrypt your collected documents';
 line++;
-string_line[1] = '1. Encrypt collected documents by typing "encrypt.exe"';
+string_line[1] = 'Instructions for encryption:';
 line++;
-string_line[2] = '2. More to come later...';
+string_line[2] = '1. Type "encrypt.exe" to begin encryption process.';
 line++;
+string_line[3] = '2. Connect your PC to the encryption server by connecting the wires between them.';
+line++;
+string_line[4] = '3. Clicking on the wires will cause them to rotate.';
+line++;
+string_line[5] = '4. Hurry! You have limited time to encrypt the documents before being shut down!';
+line++
+string_line[6] = '(Hint) Type "exit" to leave the terminal';
+line++
+string_line[7] = '';
+line++
 wait = 0;
 </string>
           </argument>
@@ -184,7 +194,8 @@ if (wait==0) {
                    
                    }
                    else {
-                        typed_text += keyboard_string;
+                        if(string_length(typed_text)&lt;75)
+                            typed_text += keyboard_string;
                         keyboard_string = "";
                         keyboard_lastkey = -1;
                         string_line[line-1] = header_text + typed_text;
@@ -199,7 +210,7 @@ if (wait==0) {
                 }
                 line = line-1;
             }
-            string_line[line-1] = "Hacking into target directory...";
+            string_line[line-1] = "Attempting to encrypt documents...";
             line++;
             if(line&gt;30) {
                 for(i=0;i&lt;29;i++) {
@@ -209,7 +220,7 @@ if (wait==0) {
             }
             typed_text = "";
             random_text = 1;
-            alarm[0] = 30;
+            alarm[0] = 60;
         }
     }
 }
