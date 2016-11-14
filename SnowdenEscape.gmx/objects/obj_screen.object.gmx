@@ -35,7 +35,7 @@ keyboard_string = "";
 line = 1;
 random_text = 0;
 i = 0;
-for(i=0;i&lt;30;i++) {
+for(i=0;i&lt;26;i++) {
 randomize();
 string_line[i] = "";
 random_text_constant = 2;
@@ -153,8 +153,8 @@ if (wait==0) {
                         if(typed_text==exit_key) {
                             another_room = 1;
                             line++;
-                            if(line&gt;30) {
-                                for(i=0;i&lt;29;i++) {
+                            if(line&gt;26) {
+                                for(i=0;i&lt;25;i++) {
                                     string_line[i] = string_line[i+1];
                                 }
                                 line = line-1;
@@ -170,8 +170,8 @@ if (wait==0) {
                         }
                         else {
                         line++;
-                        if(line&gt;30) {
-                            for(i=0;i&lt;29;i++) {
+                        if(line&gt;26) {
+                            for(i=0;i&lt;25;i++) {
                                 string_line[i] = string_line[i+1];
                             }
                             line = line-1;
@@ -194,7 +194,7 @@ if (wait==0) {
                    
                    }
                    else {
-                        if(string_length(typed_text)&lt;75)
+                        if(string_length(typed_text)&lt;70)
                             typed_text += keyboard_string;
                         keyboard_string = "";
                         keyboard_lastkey = -1;
@@ -204,21 +204,23 @@ if (wait==0) {
         }
         else {
             line++;
-            if(line&gt;30) {
-                for(i=0;i&lt;29;i++) {
+            if(line&gt;26) {
+                for(i=0;i&lt;25;i++) {
                     string_line[i] = string_line[i+1];
                 }
                 line = line-1;
             }
             string_line[line-1] = "Attempting to encrypt documents...";
             line++;
-            if(line&gt;30) {
-                for(i=0;i&lt;29;i++) {
+            if(line&gt;26) {
+                for(i=0;i&lt;25;i++) {
                     string_line[i] = string_line[i+1];
                 }
                 line = line-1;
             }
+            
             typed_text = "";
+            string_line[line-1] = "";
             random_text = 1;
             alarm[0] = 60;
         }
@@ -229,8 +231,8 @@ else {
         another_room = 0;
         string_line[line-1] = "Failed to encrypt the files";
         line++;
-        if(line&gt;30) {
-            for(i=0;i&lt;29;i++) {
+        if(line&gt;26) {
+            for(i=0;i&lt;25;i++) {
                 string_line[i] = string_line[i+1];
             }
             line = line-1;
@@ -243,8 +245,8 @@ else {
         another_room = 0;
         string_line[line-1] = "Encryption of files completed";
         line++;
-        if(line&gt;30) {
-            for(i=0;i&lt;29;i++) {
+        if(line&gt;26) {
+            for(i=0;i&lt;25;i++) {
                 string_line[i] = string_line[i+1];
             }
             line = line-1;
@@ -284,7 +286,7 @@ draw_set_valign(fa_top);
 draw_set_color(c_green);
 draw_set_font(fnt_screen_text);
 text = string_line[0];
-for(i=1;i&lt;30;i++) {
+for(i=1;i&lt;26;i++) {
 
 text +="
 "+string_line[i];
