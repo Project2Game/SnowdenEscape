@@ -43,7 +43,10 @@ random_text_c = 0;
 
 }
 another_room = 0;
-string_line[0] = string(header_text) + string(typed_text);
+string_line[0] = 'Welcome to your terminal. From here you can:';
+line++;
+string_line[1] = '1. Encrpyt collected documents by typing "encrypt.exe"';
+line++;
 wait = 0;
 </string>
           </argument>
