@@ -61,6 +61,82 @@ rotate_angle = 90;
     }
 
 }
+
+
+var pipe_orientation = position_L;
+var pipe_x = x;
+var pipe_y = y;
+var connected = 0
+
+with(obj_pipe_line) {
+    if(pipe_orientation==0) {
+    //CHECK UP AND RIGHT
+    //Check if above pipe is vertical
+        if((x==pipe_x)&amp;&amp;(y==pipe_y-92)) {
+            if(position_line==1) {
+                connected = 1;
+            }
+        }
+        //Check if right pipe is horizontal
+        if((x==pipe_x+92)&amp;&amp;(y==pipe_y)) {
+            if(position_line==0) {
+                connected = 1;
+            }
+        }
+    
+    }
+    else if(pipe_orientation==1) {
+        //CHECK UP AND LEFT
+        if((x==pipe_x)&amp;&amp;(y==pipe_y-92)) {
+            if(position_line==1) {
+                connected = 1;
+            }
+        }
+        //Check if left pipe is horizontal
+        if((x==pipe_x-92)&amp;&amp;(y==pipe_y)) {
+            if(position_line==0) {
+                connected = 1;
+            }
+        }
+    }
+    else if(pipe_orientation==2) {
+        //CHECK DOWN AND LEFT
+        //Check if left pipe is horizontal
+        if((x==pipe_x-92)&amp;&amp;(y==pipe_y)) {
+            if(position_line==0) {
+                connected = 1;
+            }
+        }
+        //Check if below pipe is vertical
+        if((x==pipe_x)&amp;&amp;(y==pipe_y+92)) {
+            if(position_line==1) {
+                connected = 1;
+            }
+        }
+    }
+    else {
+        //Check if below pipe is vertical
+        if((x==pipe_x)&amp;&amp;(y==pipe_y+92)) {
+            if(position_line==1) {
+                connected = 1;
+            }
+        }
+        //Check if right pipe is horizontal
+        if((x==pipe_x+92)&amp;&amp;(y==pipe_y)) {
+            if(position_line==0) {
+                connected = 1;
+            }
+        }
+    }
+}
+var angle = image_angle;
+if(connected == 1) {
+    sprite_index = spr_pipe_L_g;
+}
+else {
+    sprite_index = spr_pipe_L;
+}
+image_angle = angle;
 </string>
           </argument>
         </arguments>

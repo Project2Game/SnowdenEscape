@@ -29,6 +29,7 @@
 key_found = 0;
 header_text = "admin@nsa:~$ "
 typed_text = "";
+keyboard_string = "";
 line = 1;
 random_text = 0;
 i = 0;
@@ -138,6 +139,7 @@ else {
         random_text = 1;
     }
 }
+
 </string>
           </argument>
         </arguments>
