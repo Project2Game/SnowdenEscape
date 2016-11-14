@@ -71,11 +71,11 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_splash</room>
+    <room>rooms\rm_intro_exposition</room>
     <room>rooms\rm_lvl_1</room>
     <room>rooms\rm_terminal</room>
     <room>rooms\rm_hack_game</room>
     <room>rooms\rm_howto</room>
-    <room>rooms\rm_intro_exposition</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
