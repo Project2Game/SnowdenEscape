@@ -30,6 +30,8 @@
     <sprite>sprites\spr_pipe_L</sprite>
     <sprite>sprites\spr_pipe_L_g</sprite>
     <sprite>sprites\spr_document</sprite>
+    <sprite>sprites\spr_server</sprite>
+    <sprite>sprites\spr_timer</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_terminal</background>
@@ -62,6 +64,8 @@
     <object>objects\obj_splash_menu</object>
     <object>objects\obj_pause</object>
     <object>objects\obj_howto</object>
+    <object>objects\obj_server</object>
+    <object>objects\obj_timer</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_splash</room>
