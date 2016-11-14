@@ -57,6 +57,39 @@ if (distance_to_object(obj_pc) &lt; 10) {
     }
 }
 
+
+if ( place_meeting(x+hspeed-(sprite_width/2), y, obj_wall) ) {
+     while( !place_meeting(x+sign(hspeed) + 1, y, obj_wall) ) {
+        x += sign(hspeed);
+     }
+     hspeed = 0;
+}
+// Vertical Collision
+if ( place_meeting(x, y+vspeed-(sprite_height/2), obj_wall) ) {
+     while( !place_meeting(x, y + sign(vspeed) , obj_wall) ) {
+        y += sign(vspeed);
+     }
+     vspeed = 0;
+}
+
+if ( place_meeting(x+hspeed+(sprite_width/2), y, obj_wall) ) {
+     while( !place_meeting(x + sign(hspeed), y, obj_wall) ) {
+        x += sign(hspeed);
+     }
+     hspeed = 0;
+}
+// Vertical Collision
+if ( place_meeting(x, y+vspeed+(sprite_height/2), obj_wall) ) {
+     while( !place_meeting(x, y+sign(vspeed), obj_wall) ) {
+        y += sign(vspeed);
+     }
+     vspeed = 0;
+}
+
+y += vspeed;
+x += hspeed;
+
+
 /// Wall Collision (MOVED TO COLLISION WITH OBJ_WALL)
 // Horizontal Collision
 /*
