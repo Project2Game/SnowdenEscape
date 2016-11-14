@@ -74,13 +74,15 @@ with(obj_pipe_line) {
     //Check if above pipe is vertical
         if((x==pipe_x)&amp;&amp;(y==pipe_y-92)) {
             if(position_line==1) {
-                connected = 1;
+                if(sprite_index==spr_pipe_line_g)
+                    connected = 1;
             }
         }
         //Check if right pipe is horizontal
         if((x==pipe_x+92)&amp;&amp;(y==pipe_y)) {
             if(position_line==0) {
-                connected = 1;
+                if(sprite_index==spr_pipe_line_g)
+                    connected = 1;
             }
         }
     
@@ -89,13 +91,15 @@ with(obj_pipe_line) {
         //CHECK UP AND LEFT
         if((x==pipe_x)&amp;&amp;(y==pipe_y-92)) {
             if(position_line==1) {
-                connected = 1;
+                if(sprite_index==spr_pipe_line_g)
+                    connected = 1;
             }
         }
         //Check if left pipe is horizontal
         if((x==pipe_x-92)&amp;&amp;(y==pipe_y)) {
             if(position_line==0) {
-                connected = 1;
+                if(sprite_index==spr_pipe_line_g)
+                    connected = 1;
             }
         }
     }
@@ -104,13 +108,15 @@ with(obj_pipe_line) {
         //Check if left pipe is horizontal
         if((x==pipe_x-92)&amp;&amp;(y==pipe_y)) {
             if(position_line==0) {
-                connected = 1;
+                if(sprite_index==spr_pipe_line_g)
+                    connected = 1;
             }
         }
         //Check if below pipe is vertical
         if((x==pipe_x)&amp;&amp;(y==pipe_y+92)) {
             if(position_line==1) {
-                connected = 1;
+                if(sprite_index==spr_pipe_line_g)
+                    connected = 1;
             }
         }
     }
@@ -118,13 +124,15 @@ with(obj_pipe_line) {
         //Check if below pipe is vertical
         if((x==pipe_x)&amp;&amp;(y==pipe_y+92)) {
             if(position_line==1) {
-                connected = 1;
+                if(sprite_index==spr_pipe_line_g)
+                    connected = 1;
             }
         }
         //Check if right pipe is horizontal
         if((x==pipe_x+92)&amp;&amp;(y==pipe_y)) {
             if(position_line==0) {
-                connected = 1;
+                if(sprite_index==spr_pipe_line_g)
+                    connected = 1;
             }
         }
     }
