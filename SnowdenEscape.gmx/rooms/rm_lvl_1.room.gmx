@@ -284,8 +284,6 @@
     <instance objName="obj_bookcase" x="352" y="32" name="inst_64D0E3B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bookcase" x="32" y="320" name="inst_56415540" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bookcase" x="64" y="320" name="inst_26EDB729" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_bookcase" x="96" y="320" name="inst_BC962D82" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_bookcase" x="128" y="320" name="inst_5A5B7FB4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bookcase" x="160" y="320" name="inst_C09E304F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bookcase" x="160" y="320" name="inst_19D4DA8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bookcase" x="192" y="320" name="inst_7D86B775" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -333,6 +331,37 @@
     <instance objName="obj_desk" x="608" y="224" name="inst_67800942" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_desk" x="688" y="224" name="inst_979CD027" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_document" x="319" y="125" name="inst_FEC37DAD" locked="0" code="" scaleX="0.5" scaleY="0.479999989271164" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="192" y="384" name="inst_F368CD73" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="64" y="448" name="inst_638A149D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="32" y="448" name="inst_2C4CCA35" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="160" y="448" name="inst_B3A2D76B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="192" y="448" name="inst_438F0069" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="32" y="512" name="inst_503642A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="160" y="512" name="inst_1EED2EE9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="192" y="512" name="inst_CF6836E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="192" y="544" name="inst_64ED90C4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="192" y="576" name="inst_85173DA1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="192" y="608" name="inst_5A6A0554" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="192" y="640" name="inst_08B9F225" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="160" y="640" name="inst_C61A72AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="128" y="640" name="inst_E1F560E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="96" y="640" name="inst_ED9DC710" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="64" y="640" name="inst_5F1CAA2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="32" y="576" name="inst_F95BA983" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="64" y="576" name="inst_3389E243" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="80" y="576" name="inst_4196320F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="112" y="576" name="inst_1D22404C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="128" y="512" name="inst_67865EEB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="96" y="512" name="inst_9044255D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="32" y="544" name="inst_87585778" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="32" y="480" name="inst_9A716FD3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="192" y="480" name="inst_6FF31FD6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="128" y="448" name="inst_74102736" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="128" y="384" name="inst_62381319" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bookcase" x="64" y="384" name="inst_C1CB03BC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_desk" x="96" y="320" name="inst_171CA09B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_file_cabinet" x="128" y="320" name="inst_1E8EA936" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_document" x="95" y="318" name="inst_72CBE613" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
