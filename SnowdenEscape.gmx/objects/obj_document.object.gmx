@@ -3,7 +3,7 @@
   <spriteName>spr_document</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>-1000</depth>
+  <depth>-900</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -48,20 +48,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*
-///Collsion with player and transitioning to terminal room
-if (distance_to_object(obj_edward) &lt; 10) {
-    if(keyboard_check_pressed(ord('F'))) {
-        reading = 1;
-        show_debug_message('Reading document'+string(id));
-    } else {
-        reading = 0;
-    }
-    
-} else {
-    reading = 0;
+            <string>///Collsion with player and transitioning to terminal room
+if ( !read &amp;&amp; (distance_to_object(obj_edward) &lt; 20) &amp;&amp; (keyboard_check_pressed(ord('F'))) ) {
+    read = 1;
+    global.lvl_1_docs_collected++;
+    show_debug_message('Reading document: '+string(id));
+    show_debug_message('Total collected='+string(global.lvl_1_docs_collected));
 }
-*/
 </string>
           </argument>
         </arguments>
