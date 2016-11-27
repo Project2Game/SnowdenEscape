@@ -266,6 +266,7 @@ show_debug_message('doc_instance_count=' + string(instance_number(obj_document))
     <instance objName="obj_wall" x="1504" y="704" name="inst_AE9D2D9B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1536" y="704" name="inst_318A573B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="128" y="32" name="inst_CDF56760" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pause" x="64" y="32" name="inst_DDDC5A2A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_edward" x="64" y="96" name="inst_0A80BC4C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="128" y="64" name="inst_3E989913" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="128" y="96" name="inst_9370BAFA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

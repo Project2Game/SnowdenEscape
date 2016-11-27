@@ -82,7 +82,6 @@
     <room>rooms\rm_howto</room>
     <room>rooms\rm_lvl_3</room>
     <room>rooms\rm_lvl_2</room>
-    <room>rooms\rm_puzzle</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
