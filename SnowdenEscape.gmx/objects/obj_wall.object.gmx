@@ -30,6 +30,8 @@
 
         instance_create(90,90,obj_edward);
     }   
+    
+    //HOLA
 </string>
           </argument>
         </arguments>
