@@ -88,7 +88,8 @@ if (distance_to_object(obj_pc) &lt; 10) {
     }
 }
 */
-draw_self();
+if(!read)
+    draw_self();
 </string>
           </argument>
         </arguments>
