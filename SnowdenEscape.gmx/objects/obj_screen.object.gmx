@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>key = 'encrypt.exe';
+            <string>number_of_documents = 2;
+key = 'encrypt.exe';
 exit_key = "exit";
 key_found = 0;
 header_text = "admin@nsa:~$ "
