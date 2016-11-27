@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>number_of_documents = 2;
+
 key = 'encrypt.exe';
 exit_key = "exit";
 key_found = 0;
@@ -109,7 +110,8 @@ wait = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*
+            <string>documents_collected = global.lvl_1_docs_collected;
+/*
 random_text_c++;
 random_text_c = random_text_c%60;
 if(random_text==1) {
@@ -167,7 +169,29 @@ if (wait==0) {
                             room_goto(rm_lvl_1);
                         }
                         else if(typed_text==key) {
-                            key_found = 1;
+                            if(documents_collected&gt;1)
+                                key_found = 1;
+                            else {
+                                line++;
+                                if(line&gt;26) {
+                                    for(i=0;i&lt;25;i++) {
+                                        string_line[i] = string_line[i+1];
+                                    }
+                                    line = line-1;
+                                }
+                                string_line[line-1] = "Not enough documents collected...";
+                                line++;
+                                if(line&gt;26) {
+                                    for(i=0;i&lt;25;i++) {
+                                        string_line[i] = string_line[i+1];
+                                    }
+                                    line = line-1;
+                                }
+                                
+                                typed_text = "";
+                                string_line[line-1] = header_text + typed_text;
+                                keyboard_lastkey = -1;
+                            }
                         }
                         else {
                         line++;
@@ -211,7 +235,7 @@ if (wait==0) {
                 }
                 line = line-1;
             }
-            string_line[line-1] = "Attempting to encrypt documents...";
+            string_line[line-1] = "Attempting to encrypt documents " + string(documents_collected)+"/"+string(number_of_documents)+"...";
             line++;
             if(line&gt;26) {
                 for(i=0;i&lt;25;i++) {
@@ -244,7 +268,7 @@ else {
     }
     else if(global.solved==1) {
         another_room = 0;
-        string_line[line-1] = "Encryption of files completed";
+        string_line[line-1] = "Encryption of files completed!";
         line++;
         if(line&gt;26) {
             for(i=0;i&lt;25;i++) {
