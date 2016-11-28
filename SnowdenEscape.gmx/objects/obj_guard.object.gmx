@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>speed=1 + choose(0,1);
+            <string>speed=1.5 ;
 direction=round(random(360));
 alarm[0]=50+random(150);
 chase = 0;
@@ -111,7 +111,7 @@ if(chase == 1){
 if(distance_to_object(obj_edward) &gt; 400 &amp;&amp; i_i &gt; 20)
     {
     chase = 0;
-    speed=1+choose(0,1);
+    speed=1.5;
     direction=round(random(360));
     alarm[0]=50+random(150);
     i_i = 0;
