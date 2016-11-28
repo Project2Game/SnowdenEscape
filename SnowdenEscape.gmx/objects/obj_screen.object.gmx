@@ -109,7 +109,8 @@ wait = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*
+            <string>documents_found = global.lvl_1_docs_collected;
+/*
 random_text_c++;
 random_text_c = random_text_c%60;
 if(random_text==1) {
@@ -167,7 +168,31 @@ if (wait==0) {
                             room_goto(rm_lvl_1);
                         }
                         else if(typed_text==key) {
-                            key_found = 1;
+                            if(documents_found&gt;1) {
+                                key_found = 1;
+                                
+                            }
+                            else {
+                                line++;
+                                if(line&gt;26) {
+                                    for(i=0;i&lt;25;i++) {
+                                        string_line[i] = string_line[i+1];
+                                    }
+                                    line = line-1;
+                                }
+                                string_line[line-1] = "Need more documents before encrypting...";
+                                line++;
+                                if(line&gt;26) {
+                                    for(i=0;i&lt;25;i++) {
+                                        string_line[i] = string_line[i+1];
+                                    }
+                                    line = line-1;
+                                }
+                                typed_text = "";
+                                string_line[line-1] = header_text + typed_text;
+                                
+                                keyboard_lastkey = -1;
+                            }
                         }
                         else {
                         line++;
@@ -211,7 +236,7 @@ if (wait==0) {
                 }
                 line = line-1;
             }
-            string_line[line-1] = "Attempting to encrypt documents...";
+            string_line[line-1] = "Attempting to encrypt documents 2/2...";
             line++;
             if(line&gt;26) {
                 for(i=0;i&lt;25;i++) {
