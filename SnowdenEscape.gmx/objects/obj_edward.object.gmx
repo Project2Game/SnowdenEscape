@@ -61,7 +61,7 @@
     
 
 //Collsion with enemy
-if (distance_to_object(obj_guard) &lt; 20) {
+if (distance_to_object(obj_guard) &lt; 9) {
  instance_destroy();
 }
 

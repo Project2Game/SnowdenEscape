@@ -131,7 +131,17 @@ if(i_i == 5 &amp;&amp; chase == 0)
         with(instance_create(x, y, obj_los))
         {
         speed = 3;
+        direction = 23;
+        }
+        with(instance_create(x, y, obj_los))
+        {
+        speed = 3;
         direction = 45;
+        }
+        with(instance_create(x, y, obj_los))
+        {
+        speed = 3;
+        direction = 68;
         }
         with(instance_create(x, y, obj_los))
         {
@@ -141,7 +151,17 @@ if(i_i == 5 &amp;&amp; chase == 0)
         with(instance_create(x, y, obj_los))
         {
         speed = 3;
+        direction = 113;
+        }
+        with(instance_create(x, y, obj_los))
+        {
+        speed = 3;
         direction = 135;
+        }
+        with(instance_create(x, y, obj_los))
+        {
+        speed = 3;
+        direction = 158;
         }
         with(instance_create(x, y, obj_los))
         {
@@ -151,7 +171,17 @@ if(i_i == 5 &amp;&amp; chase == 0)
         with(instance_create(x, y, obj_los))
         {
         speed = 3;
+        direction = 203;
+        }
+        with(instance_create(x, y, obj_los))
+        {
+        speed = 3;
         direction = 225;
+        }
+        with(instance_create(x, y, obj_los))
+        {
+        speed = 3;
+        direction = 248;
         }
         with(instance_create(x, y, obj_los))
         {
@@ -161,7 +191,17 @@ if(i_i == 5 &amp;&amp; chase == 0)
         with(instance_create(x, y, obj_los))
         {
         speed = 3;
+        direction = 293;
+        }
+        with(instance_create(x, y, obj_los))
+        {
+        speed = 3;
         direction = 315;
+        }
+        with(instance_create(x, y, obj_los))
+        {
+        speed = 3;
+        direction = 338;
         }
 
     }

@@ -61,7 +61,7 @@ draw_text(x + 195 ,y+ 500 , "Press enter to begin level 1.");
         <arguments>
           <argument>
             <kind>11</kind>
-            <room>rm_lvl_1</room>
+            <room>rm_lvl_2</room>
           </argument>
         </arguments>
       </action>

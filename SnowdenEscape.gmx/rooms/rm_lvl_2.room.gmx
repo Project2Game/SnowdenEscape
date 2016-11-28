@@ -10,8 +10,31 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code></code>
-  <enableViews>0</enableViews>
+  <code>global.lvl_1_docs_collected = 0;
+
+story_arr[0] = "Verizon keeps cell phone records of almost all customers for years.";
+story_arr[1] = "The CIA creates a web of influence for each individual by sniffing all of your social media connections.";
+story_arr[2] = "The CIA requires Google to cache all images uploaded, along with the source IP.";
+story_arr[3] = "The CIA requires Google to cache all images uploaded, along with the source IP.";
+
+//global.lvl_1_docs = ds_map_create();
+
+
+for (var i = 0; i &lt; instance_number(obj_document); i += 1;) {
+    cur_instance_id = instance_find(obj_document, i);
+    with (cur_instance_id) content = "Here fun fact number "+string(i+1);
+/*    // text?
+    // found?
+
+    cur_instance_id = ds_map_create();
+    
+    ds_map_add(global.lvl_1_docs, cur_instance_id, 1);
+    ds_map_add(global.lvl_1_docs, cur_instance, 100); */
+}
+
+show_debug_message('doc_instance_count=' + string(instance_number(obj_document)));
+//show_debug_message(instance_id[i]);</code>
+  <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
@@ -41,7 +64,7 @@
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="512" hview="384" xport="0" yport="0" wport="1024" hport="768" hborder="128" vborder="128" hspeed="-1" vspeed="-1"/>
+    <view visible="-1" objName="obj_edward" xview="0" yview="0" wview="512" hview="384" xport="0" yport="0" wport="1024" hport="768" hborder="128" vborder="128" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -750,6 +773,9 @@
     <instance objName="obj_document" x="1600" y="224" name="inst_0BF0BC66" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="0"/>
     <instance objName="obj_document" x="1632" y="416" name="inst_BFE111E6" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="90"/>
     <instance objName="obj_document" x="1792" y="416" name="inst_17D1ACE4" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="90"/>
+    <instance objName="obj_guard" x="448" y="160" name="inst_FC22BCD2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_guard" x="1344" y="576" name="inst_7AE8AD72" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_guard" x="1888" y="192" name="inst_33177709" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
