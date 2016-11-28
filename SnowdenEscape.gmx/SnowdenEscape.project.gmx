@@ -35,10 +35,12 @@
     <sprite>sprites\spr_doc_counter</sprite>
     <sprite>sprites\spr_radius</sprite>
     <sprite>sprites\spr_los</sprite>
+    <sprite>sprites\spr_servers_in_room</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_terminal</background>
     <background>background\background1</background>
+    <background>background\background2</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -74,6 +76,7 @@
     <object>objects\obj_doc_counter</object>
     <object>objects\obj_radius</object>
     <object>objects\obj_los</object>
+    <object>objects\obj_servers_in_room</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_splash</room>
