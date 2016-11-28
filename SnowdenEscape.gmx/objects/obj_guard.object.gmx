@@ -28,7 +28,7 @@
             <string>speed=1+random(2);
 direction=round(random(360));
 alarm[0]=50+random(150);
-
+chase = 0;
 i_i = 0;
 
 
@@ -54,8 +54,12 @@ i_i = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>direction=round(random(360));
-alarm[0]=50+random(150);
+            <string>if (chase == 0)
+    {   
+    direction=round(random(360));
+    alarm[0]=50+random(150);
+    }
+    
 </string>
           </argument>
         </arguments>
@@ -102,9 +106,23 @@ alarm[0]=50+random(150);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>i_i = i_i + 1;
+            <string>//Chase code
+if(global.chase_mode == 1)
+    {
+        if (distance_to_object(obj_edward) &lt; 200)
+        {
+            chase = 1;
+            global.chase_mode = 0;
+        }
 
+    }
+if(chase == 1)
+    {
+    move_towards_point(obj_edward.x, obj_edward.y,4);
 
+    }
+//LoS creation code
+i_i = i_i + 1;
 if(i_i == 5) 
     {
         i_i = 0;
@@ -116,7 +134,17 @@ if(i_i == 5)
         with(instance_create(x, y, obj_los))
         {
         speed = 3;
+        direction = 45;
+        }
+        with(instance_create(x, y, obj_los))
+        {
+        speed = 3;
         direction = 90;
+        }
+        with(instance_create(x, y, obj_los))
+        {
+        speed = 3;
+        direction = 135;
         }
         with(instance_create(x, y, obj_los))
         {
@@ -126,10 +154,18 @@ if(i_i == 5)
         with(instance_create(x, y, obj_los))
         {
         speed = 3;
+        direction = 225;
+        }
+        with(instance_create(x, y, obj_los))
+        {
+        speed = 3;
         direction = 270;
         }
-
-
+        with(instance_create(x, y, obj_los))
+        {
+        speed = 3;
+        direction = 315;
+        }
 
     }
 </string>

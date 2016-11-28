@@ -32,6 +32,8 @@ options[2] = "Quit";
 
 spacing = 64;        // spacing between each line
 selection = 0;  // menu item selection starts on option 0
+
+global.chase_mode = 0;
 </string>
           </argument>
         </arguments>
