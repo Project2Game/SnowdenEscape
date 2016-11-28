@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>speed=1+random(2);
+            <string>speed=1 + choose(0,1);
 direction=round(random(360));
 alarm[0]=50+random(150);
 chase = 0;
@@ -106,6 +106,18 @@ if(chase == 1){
         move_random(1,1);
         }
         }
+        
+                
+if(distance_to_object(obj_edward) &gt; 400 &amp;&amp; i_i &gt; 20)
+    {
+    chase = 0;
+    speed=1+choose(0,1);
+    direction=round(random(360));
+    alarm[0]=50+random(150);
+    i_i = 0;
+    }        
+
+
 //LoS creation code
 i_i = i_i + 1;
 if(i_i == 5 &amp;&amp; chase == 0) 
@@ -153,6 +165,10 @@ if(i_i == 5 &amp;&amp; chase == 0)
         }
 
     }
+    
+if(i_i &gt; 50){
+    i_i = 0;
+}
 </string>
           </argument>
         </arguments>
