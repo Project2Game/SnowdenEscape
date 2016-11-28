@@ -116,11 +116,20 @@ if(global.chase_mode == 1)
         }
 
     }
-if(chase == 1)
-    {
-    move_towards_point(obj_edward.x, obj_edward.y,4);
+if(chase == 1){
+    if( object_exists(obj_edward))
+        {
+        
 
-    }
+        move_towards_point(global.dirx_edward, global.diry_edward,2);
+
+        }
+    else
+        {
+        chase = 0;
+        move_random(1,1);
+        }
+        }
 //LoS creation code
 i_i = i_i + 1;
 if(i_i == 5) 

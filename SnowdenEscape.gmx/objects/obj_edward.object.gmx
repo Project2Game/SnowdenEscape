@@ -54,7 +54,10 @@
 
     }   
 //-------------------------------------------------------------    
-    
+//LoS code
+
+        global.dirx_edward = obj_edward.x;
+        global.diry_edward = obj_edward.y;    
     
 
 //Collsion with enemy

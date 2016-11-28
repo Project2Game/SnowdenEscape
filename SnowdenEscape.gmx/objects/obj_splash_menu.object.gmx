@@ -34,6 +34,8 @@ spacing = 64;        // spacing between each line
 selection = 0;  // menu item selection starts on option 0
 
 global.chase_mode = 0;
+global.dirx_edward = 0;
+global.diry_edward = 0;
 </string>
           </argument>
         </arguments>
