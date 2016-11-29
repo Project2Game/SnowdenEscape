@@ -42,7 +42,9 @@
     <background>background\background1</background>
     <background>background\background2</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\rm_lvl_2_path1</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\scr_splash_menu.gml</script>
     <script>scripts\scr_pause.gml</script>
@@ -60,8 +62,8 @@
     <object>objects\obj_bookcase</object>
     <object>objects\obj_desk</object>
     <object>objects\obj_pc</object>
-    <object>objects\obj_door</object>
     <object>objects\obj_guard</object>
+    <object>objects\obj_door</object>
     <object>objects\obj_key</object>
     <object>objects\obj_pipe_L</object>
     <object>objects\obj_pipe_cross</object>
@@ -77,7 +79,7 @@
     <object>objects\obj_radius</object>
     <object>objects\obj_los</object>
     <object>objects\obj_servers_in_room</object>
-    <object>objects\obj_guard_path</object>
+    <object>objects\obj_guard_path1</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_splash</room>
