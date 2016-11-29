@@ -41,6 +41,7 @@
     <background>background\bg_terminal</background>
     <background>background\background1</background>
     <background>background\background2</background>
+    <background>background\background3</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\rm_lvl_2_path1</path>
@@ -90,6 +91,7 @@
     <room>rooms\rm_howto</room>
     <room>rooms\rm_lvl_3</room>
     <room>rooms\rm_lvl_2</room>
+    <room>rooms\rm_lvl_4</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
