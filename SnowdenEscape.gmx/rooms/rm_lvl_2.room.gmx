@@ -3,10 +3,10 @@
   <caption></caption>
   <width>2048</width>
   <height>704</height>
-  <vsnap>16</vsnap>
-  <hsnap>16</hsnap>
+  <vsnap>32</vsnap>
+  <hsnap>32</hsnap>
   <isometric>0</isometric>
-  <speed>30</speed>
+  <speed>60</speed>
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
@@ -738,23 +738,15 @@ show_debug_message('doc_instance_count=' + string(instance_number(obj_document))
     <instance objName="obj_file_cabinet" x="1792" y="608" name="inst_39BBEEC1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_file_cabinet" x="1824" y="608" name="inst_C76DEF23" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_file_cabinet" x="1856" y="608" name="inst_5E822B21" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_document" x="96" y="256" name="inst_1D957C6F" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="0"/>
     <instance objName="obj_document" x="32" y="352" name="inst_626AF165" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="90"/>
     <instance objName="obj_document" x="32" y="352" name="inst_2640C832" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="90"/>
     <instance objName="obj_document" x="256" y="352" name="inst_72A15241" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="90"/>
-    <instance objName="obj_document" x="256" y="544" name="inst_D4440376" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="90"/>
-    <instance objName="obj_document" x="608" y="448" name="inst_4E9680EE" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="0"/>
     <instance objName="obj_document" x="576" y="448" name="inst_BF2C8288" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="0"/>
-    <instance objName="obj_document" x="544" y="320" name="inst_17A191F7" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="0"/>
     <instance objName="obj_document" x="544" y="224" name="inst_D2E19A99" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="0"/>
-    <instance objName="obj_document" x="416" y="128" name="inst_E0B3423F" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="0"/>
     <instance objName="obj_document" x="768" y="448" name="inst_EE00FD00" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="0"/>
-    <instance objName="obj_document" x="1216" y="672" name="inst_321A6434" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="180"/>
     <instance objName="obj_document" x="1408" y="640" name="inst_FAE39F7A" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="0"/>
-    <instance objName="obj_document" x="1504" y="544" name="inst_A4A91BC4" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="0"/>
     <instance objName="obj_document" x="1216" y="256" name="inst_A968A714" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="0"/>
     <instance objName="obj_document" x="1280" y="128" name="inst_0C168EBF" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="270"/>
-    <instance objName="obj_document" x="992" y="96" name="inst_9CC7410A" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="0"/>
     <instance objName="obj_file_cabinet" x="960" y="256" name="inst_6D12783D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_file_cabinet" x="992" y="256" name="inst_0BCFDC99" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_file_cabinet" x="1024" y="256" name="inst_8320A0AB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -771,11 +763,14 @@ show_debug_message('doc_instance_count=' + string(instance_number(obj_document))
     <instance objName="obj_wall" x="1024" y="384" name="inst_21146509" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_document" x="1088" y="320" name="inst_56122BB5" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="270"/>
     <instance objName="obj_document" x="1600" y="224" name="inst_0BF0BC66" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="0"/>
-    <instance objName="obj_document" x="1632" y="416" name="inst_BFE111E6" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="90"/>
     <instance objName="obj_document" x="1792" y="416" name="inst_17D1ACE4" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="90"/>
     <instance objName="obj_guard" x="608" y="192" name="inst_822414C4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_guard_path1" x="880" y="80" name="inst_D23B20A8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_guard_path1" x="1360" y="64" name="inst_26A0B62A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="128" y="128" name="inst_95576C84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_document" x="96" y="96" name="inst_E6D2A192" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="128" y="128" name="inst_A4206D14" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_document" x="1216" y="672" name="inst_24384347" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

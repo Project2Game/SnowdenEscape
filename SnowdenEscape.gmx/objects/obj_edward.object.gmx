@@ -64,7 +64,9 @@
 if (distance_to_object(obj_guard) &lt; 9) {
  instance_destroy();
 }
-
+if (distance_to_object(obj_guard_path1) &lt; 9) {
+ instance_destroy();
+}
 
 //Collsion with PC and transitioning to terminal room
 if (distance_to_object(obj_pc) &lt; 10) {
