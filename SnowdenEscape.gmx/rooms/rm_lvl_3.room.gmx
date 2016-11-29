@@ -3,8 +3,8 @@
   <caption></caption>
   <width>2048</width>
   <height>704</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>16</vsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -257,7 +257,7 @@
     <instance objName="obj_wall" x="32" y="160" name="inst_D9D2EC38" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="64" y="160" name="inst_363CAF6B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="160" y="160" name="inst_BF51E707" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_edward" x="96" y="96" name="inst_2E7C288E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_edward" x="48" y="112" name="inst_2E7C288E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_desk" x="160" y="96" name="inst_75A7485E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_file_cabinet" x="128" y="32" name="inst_CC1B1545" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_file_cabinet" x="128" y="32" name="inst_FF93B3D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -772,6 +772,9 @@
     <instance objName="obj_document" x="1728" y="160" name="inst_73085A23" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="90"/>
     <instance objName="obj_document" x="1728" y="512" name="inst_01FE7E21" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="0"/>
     <instance objName="obj_document" x="1984" y="576" name="inst_66EA9003" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="270"/>
+    <instance objName="obj_guard" x="256" y="560" name="inst_A69E4F17" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_guard" x="720" y="560" name="inst_25F4355F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_guard_path2" x="128" y="208" name="inst_BBB8D743" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

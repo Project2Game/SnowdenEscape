@@ -45,6 +45,7 @@
   </backgrounds>
   <paths name="paths">
     <path>paths\rm_lvl_2_path1</path>
+    <path>paths\rm_lvl_3_path2</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\scr_splash_menu.gml</script>
@@ -80,6 +81,7 @@
     <object>objects\obj_radius</object>
     <object>objects\obj_los</object>
     <object>objects\obj_servers_in_room</object>
+    <object>objects\obj_guard_path2</object>
     <object>objects\obj_guard_path1</object>
   </objects>
   <rooms name="rooms">
