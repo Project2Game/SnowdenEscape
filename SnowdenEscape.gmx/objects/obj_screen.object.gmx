@@ -29,7 +29,7 @@
 key = 'encrypt.exe';
 exit_key = "exit";
 key_found = 0;
-header_text = "admin@nsa:~$ "
+header_text = "snowden@CIA:~$ "
 typed_text = "";
 keyboard_key = -1;
 keyboard_string = "";
@@ -165,10 +165,10 @@ if (wait==0) {
                             typed_text = "";
                             string_line[line-1] = header_text + typed_text;
                             keyboard_lastkey = -1;
-                            room_goto(rm_lvl_1);
+                            room_goto(rm_lvl_2);
                         }
                         else if(typed_text==key) {
-                            if(documents_found&gt;1) {
+                            if(documents_found&gt;13) {
                                 key_found = 1;
                                 
                             }
@@ -236,7 +236,7 @@ if (wait==0) {
                 }
                 line = line-1;
             }
-            string_line[line-1] = "Attempting to encrypt documents 2/2...";
+            string_line[line-1] = "Attempting to encrypt documents 14/14...";
             line++;
             if(line&gt;26) {
                 for(i=0;i&lt;25;i++) {
