@@ -271,7 +271,7 @@ if(i_i &gt; 50){
         <arguments>
           <argument>
             <kind>8</kind>
-            <path>rm_lvl_2_path1</path>
+            <path>-100</path>
           </argument>
           <argument>
             <kind>0</kind>
@@ -461,7 +461,7 @@ if(i_i &gt; 50){
           </argument>
           <argument>
             <kind>0</kind>
-            <string>2</string>
+            <string>1.75</string>
           </argument>
           <argument>
             <kind>4</kind>
