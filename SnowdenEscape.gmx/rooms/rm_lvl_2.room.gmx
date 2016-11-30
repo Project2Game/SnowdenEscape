@@ -34,7 +34,7 @@ for (var i = 0; i &lt; instance_number(obj_document); i += 1;) {
 
 show_debug_message('doc_instance_count=' + string(instance_number(obj_document)));
 //show_debug_message(instance_id[i]);</code>
-  <enableViews>-1</enableViews>
+  <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
