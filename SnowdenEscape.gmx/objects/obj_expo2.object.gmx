@@ -30,13 +30,13 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_color(c_lime);
 draw_set_font(fnt_screen_text);
-expo_2string = "EXPO 2: It is March 2007, Edward Snowden works for the CIA stationed in Geneva, Switzerland.";
+expo_2string = "Snowden is now working for the NSA...";
 draw_text(x,y,expo_2string);
-draw_text(x  ,y + 20,"Here Snowden works as a high level technical and cybersecurity expert chosen specifily by the CIA.");
-draw_text(x ,y + 40,"While working there Edward Snowden started to become disenchanted by the U.S. government...");
-draw_text(x + 40 ,y+ 160 , "Edward Snowden-  Disillusioned about how my government functions and what its impact");
-draw_text(x + 195 ,y+ 180 , "is in the world. I realized that I was part of something");
-draw_text(x + 195 ,y+ 200 , "that was doing far more harm than good.");
+draw_text(x  ,y + 20,"While working for the NSA, Snowden has begun to understand how much harm the U.S. government");
+draw_text(x ,y + 40,"is doing.  He needs to let the world know of all of the terrible things that they have done.");
+draw_text(x + 40 ,y+ 160 , "Edward Snowden-  The world needs to know what is going on.  The U.S. government is changing");
+draw_text(x + 195 ,y+ 180 , "how secrets are handled. I feel that these secrets need to be made public. I have");
+draw_text(x + 195 ,y+ 200 , "to continue with my plans of exposing the government for all of its terrible choices.");
 
 draw_text(x + 195 ,y+ 500 , "Press enter to begin level 2.");
 </string>

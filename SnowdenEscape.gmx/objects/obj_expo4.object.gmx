@@ -30,13 +30,15 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_color(c_lime);
 draw_set_font(fnt_screen_text);
-expo_3string = "EXPO 4: THE END";
+expo_3string = "THE END";
 draw_text(x,y,expo_3string);
-draw_text(x  ,y + 20,"Here Snowden works as a high level technical and cybersecurity expert chosen specifily by the CIA.");
-draw_text(x ,y + 40,"While working there Edward Snowden started to become disenchanted by the U.S. government...");
-draw_text(x + 40 ,y+ 160 , "Edward Snowden-  Disillusioned about how my government functions and what its impact");
-draw_text(x + 195 ,y+ 180 , "is in the world. I realized that I was part of something");
-draw_text(x + 195 ,y+ 200 , "that was doing far more harm than good.");
+draw_text(x ,y + 20,"Here Snowden has escaped to the winterly land of Russia. Russia has offered him asylum...");
+draw_text(x ,y + 40,"and the offer was gladly accepted. All of the documents that have been encrypted were uploaded");
+draw_text(x, y + 60,"to the now famous of Wikileaks...");
+draw_text(x + 40  ,y+ 160 , "Edward Snowden-  I am confident that I have done the right thing.  The world needs");
+draw_text(x + 195 ,y+ 180 , "to know about what has been done and what is currently being done by the United States. ");
+draw_text(x + 195 ,y+ 200 , "The United States has made some questionable choices and I needed to shed some light");
+draw_text(x + 195 ,y+ 220 , "on them.");
 
 draw_text(x + 195 ,y+ 500 , "Press ESCAPE to EXIT GAME");
 </string>
