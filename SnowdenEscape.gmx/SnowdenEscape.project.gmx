@@ -63,6 +63,7 @@
   <fonts name="fonts">
     <font>fonts\fnt_screen_text</font>
     <font>fonts\fnt_title</font>
+    <font>fonts\fnt_timer</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_wall</object>
@@ -85,6 +86,9 @@
     <object>objects\obj_server</object>
     <object>objects\obj_timer</object>
     <object>objects\obj_expo1</object>
+    <object>objects\obj_expo2</object>
+    <object>objects\obj_expo3</object>
+    <object>objects\obj_expo4</object>
     <object>objects\obj_doc_counter</object>
     <object>objects\obj_radius</object>
     <object>objects\obj_los</object>
@@ -103,9 +107,16 @@
   <rooms name="rooms">
     <room>rooms\rm_splash</room>
     <room>rooms\rm_intro_exposition</room>
+    <room>rooms\rm_exposition_2</room>
+    <room>rooms\rm_exposition_3</room>
+    <room>rooms\rm_exposition_4</room>
     <room>rooms\rm_lvl_1</room>
     <room>rooms\rm_terminal</room>
+    <room>rooms\rm_terminal2</room>
+    <room>rooms\rm_terminal3</room>
     <room>rooms\rm_hack_game</room>
+    <room>rooms\rm_hack_game2</room>
+    <room>rooms\rm_hack_game3</room>
     <room>rooms\rm_howto</room>
     <room>rooms\rm_lvl_3</room>
     <room>rooms\rm_lvl_2</room>

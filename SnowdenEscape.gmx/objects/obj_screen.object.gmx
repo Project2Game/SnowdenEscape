@@ -66,6 +66,39 @@ wait = 0;
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>another_room  =1;
+global.level++;
+if(global.level==1) {
+    room_goto(rm_exposition_2);
+}
+else if(global.level==2) {
+    room_goto(rm_exposition_3);
+}
+else if(global.level==3) {
+    room_goto(rm_exposition_4);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
@@ -85,7 +118,12 @@ wait = 0;
             <kind>1</kind>
             <string>random_text = 0;
 another_room = 1;
-room_goto(rm_hack_game);
+if(global.level==0)
+    room_goto(rm_hack_game2);
+else if(global.level==1)
+    room_goto(rm_hack_game3);
+else if(global.level==2)
+    room_goto(rm_hack_game);
 wait = 1;
 </string>
           </argument>
@@ -109,7 +147,13 @@ wait = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>documents_found = global.lvl_1_docs_collected;
+            <string>if(global.level==1)
+    number_of_documents = 14;
+else if(global.level==2)
+    number_of_documents = 1;
+else
+    number_of_documents = 15;
+documents_found = global.lvl_1_docs_collected;
 /*
 random_text_c++;
 random_text_c = random_text_c%60;
@@ -165,10 +209,18 @@ if (wait==0) {
                             typed_text = "";
                             string_line[line-1] = header_text + typed_text;
                             keyboard_lastkey = -1;
-                            room_goto(rm_lvl_2);
+                            if(global.level==0) {
+                                room_goto(rm_lvl_2);
+                            }
+                            else if(global.level==1) {
+                                room_goto(rm_lvl_3);
+                            }
+                            else if(global.level==2) {
+                                room_goto(rm_lvl_4);
+                            }
                         }
                         else if(typed_text==key) {
-                            if(documents_found&gt;13) {
+                            if(documents_found&gt;(number_of_documents-1)) {
                                 key_found = 1;
                                 
                             }
@@ -236,7 +288,7 @@ if (wait==0) {
                 }
                 line = line-1;
             }
-            string_line[line-1] = "Attempting to encrypt documents 14/14...";
+            string_line[line-1] = "Attempting to encrypt documents "+string(number_of_documents)+"/"+string(number_of_documents)+"...";
             line++;
             if(line&gt;26) {
                 for(i=0;i&lt;25;i++) {
@@ -269,7 +321,7 @@ else {
     }
     else if(global.solved==1) {
         another_room = 0;
-        string_line[line-1] = "Encryption of files completed";
+        string_line[line-1] = "Encryption of files completed!";
         line++;
         if(line&gt;26) {
             for(i=0;i&lt;25;i++) {
@@ -280,6 +332,7 @@ else {
         typed_text = "";
         string_line[line-1] = header_text;
         wait = 0;
+        alarm[1] = 60;
     }
 }
 </string>

@@ -25,7 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>second = 30;
+            <string>if(global.level==0)
+    second = 15;
+if(global.level==1)
+    second = 15;
+if(global.level==2)
+    second = 15;
+
 msec = 0;
 stop = 0;
 timer_done = 0;
@@ -123,20 +129,20 @@ finished = 0;
             <kind>1</kind>
             <string>draw_self();
 
-draw_set_halign(fa_left);
-draw_set_valign(fa_top);
-
-if(second&lt;10) {
+draw_set_halign(fa_center);
+draw_set_valign(fa_center);
+draw_set_font(fnt_timer);
+if(second&lt;5) {
     draw_set_color(c_red);
 }
-else if(second&lt;20) {
+else if(second&lt;10) {
     draw_set_color(c_orange);
 }
-else if(second&lt;=30) {
+else if(second&lt;=15) {
     draw_set_color(c_green);
 }
 
-draw_set_font(fnt_screen_text);
+
 if(msec&lt;1000) {
     time = string(second) + "."+string(msec);
 }
