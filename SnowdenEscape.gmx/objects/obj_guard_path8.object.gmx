@@ -25,16 +25,104 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>speed=1.5 ;
-direction=round(random(360));
-alarm[0]=50+random(150);
-chase = 0;
+            <string>//speed=1.5 ;
+//direction=round(random(360));
+//alarm[0]=50+random(150);
+chase = 2;
 i_i = 0;
 
 
 </string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>chase</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>2</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>119</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_path</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>8</kind>
+            <path>rm_lvl_4_path8</path>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>2</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>2</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>1</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="2" enumb="0">
@@ -120,7 +208,7 @@ if(distance_to_object(obj_edward) &gt; 400 &amp;&amp; i_i &gt; 19)
 
 //LoS creation code
 i_i = i_i + 1;
-if(i_i == 5 &amp;&amp; chase == 0) 
+if(i_i == 5 &amp;&amp; (chase == 0 || chase == 2)) 
     {
         i_i = 0;
        with(instance_create(x, y, obj_los))
@@ -338,6 +426,20 @@ if(i_i &gt; 20){
       </action>
       <action>
         <libid>1</libid>
+        <id>124</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_path_end</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>121</id>
         <kind>0</kind>
         <userelative>-1</userelative>
@@ -360,7 +462,7 @@ if(i_i &gt; 20){
           </argument>
           <argument>
             <kind>0</kind>
-            <string>1.75</string>
+            <string>1.85</string>
           </argument>
           <argument>
             <kind>4</kind>

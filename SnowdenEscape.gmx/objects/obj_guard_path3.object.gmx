@@ -176,7 +176,7 @@ if(global.chase_mode == 1)
         if (distance_to_object(obj_edward) &lt; 200)
         {
             chase = 1;
-            global.chase_mode = 0;
+            
         }
 
     }
@@ -196,7 +196,7 @@ if(chase == 1){
         }
         
                 
-if(distance_to_object(obj_edward) &gt; 400 &amp;&amp; i_i &gt; 20)
+if(distance_to_object(obj_edward) &gt; 400 &amp;&amp; i_i &gt; 19)
     {
     chase = 0;
     speed=1.5;
@@ -208,7 +208,7 @@ if(distance_to_object(obj_edward) &gt; 400 &amp;&amp; i_i &gt; 20)
 
 //LoS creation code
 i_i = i_i + 1;
-if(i_i == 5 &amp;&amp; (chase == 0 || chase ==2)) 
+if(i_i == 5 &amp;&amp; (chase == 0 || chase == 2)) 
     {
         i_i = 0;
        with(instance_create(x, y, obj_los))
@@ -294,8 +294,9 @@ if(i_i == 5 &amp;&amp; (chase == 0 || chase ==2))
 
     }
     
-if(i_i &gt; 50){
+if(i_i &gt; 20){
     i_i = 0;
+    global.chase_mode = 0;
 }
 </string>
           </argument>

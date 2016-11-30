@@ -48,6 +48,12 @@
     <path>paths\rm_lvl_3_path2</path>
     <path>paths\rm_lvl_3_path3</path>
     <path>paths\rm_lvl_4_path4</path>
+    <path>paths\rm_lvl_4_path5</path>
+    <path>paths\rm_lvl_4_path6</path>
+    <path>paths\rm_lvl_4_path7</path>
+    <path>paths\rm_lvl_4_path8</path>
+    <path>paths\rm_lvl_4_path9</path>
+    <path>paths\rm_lvl_4_path10</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\scr_splash_menu.gml</script>
@@ -86,6 +92,12 @@
     <object>objects\obj_guard_path2</object>
     <object>objects\obj_guard_path3</object>
     <object>objects\obj_guard_path4</object>
+    <object>objects\obj_guard_path5</object>
+    <object>objects\obj_guard_path6</object>
+    <object>objects\obj_guard_path7</object>
+    <object>objects\obj_guard_path8</object>
+    <object>objects\obj_guard_path9</object>
+    <object>objects\obj_guard_path10</object>
     <object>objects\obj_guard_path1</object>
   </objects>
   <rooms name="rooms">
