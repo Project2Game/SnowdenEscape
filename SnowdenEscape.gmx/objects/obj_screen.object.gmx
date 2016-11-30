@@ -29,7 +29,7 @@
 key = 'encrypt.exe';
 exit_key = "exit";
 key_found = 0;
-header_text = "snowden@CIA:~$ "
+header_text = "snowden@PC:~$ "
 typed_text = "";
 keyboard_key = -1;
 keyboard_string = "";

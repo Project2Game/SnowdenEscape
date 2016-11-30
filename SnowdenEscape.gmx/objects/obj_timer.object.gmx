@@ -142,8 +142,10 @@ else if(second&lt;=15) {
     draw_set_color(c_green);
 }
 
-
-if(msec&lt;1000) {
+if(second&lt;0) {
+    time = "0.000";
+}
+else if(msec&lt;1000) {
     time = string(second) + "."+string(msec);
 }
 else if(msec%100==0) {
