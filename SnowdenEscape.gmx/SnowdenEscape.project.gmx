@@ -54,6 +54,7 @@
     <path>paths\rm_lvl_4_path8</path>
     <path>paths\rm_lvl_4_path9</path>
     <path>paths\rm_lvl_4_path10</path>
+    <path>paths\rm_lvl_4_path11</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\scr_splash_menu.gml</script>
@@ -102,6 +103,7 @@
     <object>objects\obj_guard_path8</object>
     <object>objects\obj_guard_path9</object>
     <object>objects\obj_guard_path10</object>
+    <object>objects\obj_guard_path11</object>
     <object>objects\obj_guard_path1</object>
   </objects>
   <rooms name="rooms">

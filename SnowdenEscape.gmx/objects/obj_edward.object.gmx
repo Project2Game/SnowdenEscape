@@ -159,42 +159,117 @@ if (distance_to_object(obj_guard_path3) &lt; 9) {
 }
 }
 
-
-/// Wall Collision (MOVED TO COLLISION WITH OBJ_WALL)
-// Horizontal Collision
-/*
-if ( place_meeting(x+hspeed-(sprite_width/2), y, obj_wall) ) {
-     while( !place_meeting(x+sign(hspeed)-(sprite_width/2), y, obj_wall) ) {
-        x += sign(hspeed);
-     }
-     hspeed = 0;
+if (distance_to_object(obj_guard_path4) &lt; 9) {
+ x=32;
+ y=32;
+ global.lvl_1_docs_collected=0;
+ with(obj_document) {
+    read = 0;
+ }
+ switch(global.level) {
+    case 0: room_goto(rm_intro_exposition); break;
+    case 1: room_goto(rm_exposition_2); break;
+    case 2: room_goto(rm_exposition_3); break;
 }
-// Vertical Collision
-if ( place_meeting(x, y+vspeed-(sprite_height/2), obj_wall) ) {
-     while( !place_meeting(x, y + sign(vspeed)-(sprite_height/2), obj_wall) ) {
-        y += sign(vspeed);
-     }
-     vspeed = 0;
 }
 
-if ( place_meeting(x+hspeed+(sprite_width/2), y, obj_wall) ) {
-     while( !place_meeting(x + sign(hspeed)+(sprite_width/2), y, obj_wall) ) {
-        x += sign(hspeed);
-     }
-     hspeed = 0;
+if (distance_to_object(obj_guard_path5) &lt; 9) {
+ x=32;
+ y=32;
+ global.lvl_1_docs_collected=0;
+ with(obj_document) {
+    read = 0;
+ }
+ switch(global.level) {
+    case 0: room_goto(rm_intro_exposition); break;
+    case 1: room_goto(rm_exposition_2); break;
+    case 2: room_goto(rm_exposition_3); break;
 }
-// Vertical Collision
-if ( place_meeting(x, y+vspeed+(sprite_height/2), obj_wall) ) {
-     while( !place_meeting(x, y+sign(vspeed)+(sprite_height/2), obj_wall) ) {
-        y += sign(vspeed);
-     }
-     vspeed = 0;
 }
 
-y += vspeed;
-x += hspeed;
-*/
+if (distance_to_object(obj_guard_path6) &lt; 9) {
+ x=32;
+ y=32;
+ global.lvl_1_docs_collected=0;
+ with(obj_document) {
+    read = 0;
+ }
+ switch(global.level) {
+    case 0: room_goto(rm_intro_exposition); break;
+    case 1: room_goto(rm_exposition_2); break;
+    case 2: room_goto(rm_exposition_3); break;
+}
+}
 
+if (distance_to_object(obj_guard_path7) &lt; 9) {
+ x=32;
+ y=32;
+ global.lvl_1_docs_collected=0;
+ with(obj_document) {
+    read = 0;
+ }
+ switch(global.level) {
+    case 0: room_goto(rm_intro_exposition); break;
+    case 1: room_goto(rm_exposition_2); break;
+    case 2: room_goto(rm_exposition_3); break;
+}
+}
+
+if (distance_to_object(obj_guard_path8) &lt; 9) {
+ x=32;
+ y=32;
+ global.lvl_1_docs_collected=0;
+ with(obj_document) {
+    read = 0;
+ }
+ switch(global.level) {
+    case 0: room_goto(rm_intro_exposition); break;
+    case 1: room_goto(rm_exposition_2); break;
+    case 2: room_goto(rm_exposition_3); break;
+}
+}
+
+if (distance_to_object(obj_guard_path9) &lt; 9) {
+ x=32;
+ y=32;
+ global.lvl_1_docs_collected=0;
+ with(obj_document) {
+    read = 0;
+ }
+ switch(global.level) {
+    case 0: room_goto(rm_intro_exposition); break;
+    case 1: room_goto(rm_exposition_2); break;
+    case 2: room_goto(rm_exposition_3); break;
+}
+}
+
+if (distance_to_object(obj_guard_path10) &lt; 9) {
+ x=32;
+ y=32;
+ global.lvl_1_docs_collected=0;
+ with(obj_document) {
+    read = 0;
+ }
+ switch(global.level) {
+    case 0: room_goto(rm_intro_exposition); break;
+    case 1: room_goto(rm_exposition_2); break;
+    case 2: room_goto(rm_exposition_3); break;
+}
+}
+
+if (distance_to_object(obj_guard_path11) &lt; 9) {
+ x=32;
+ y=32;
+ global.lvl_1_docs_collected=0;
+ with(obj_document) {
+    read = 0;
+ }
+ switch(global.level) {
+    case 0: room_goto(rm_intro_exposition); break;
+    case 1: room_goto(rm_exposition_2); break;
+    case 2: room_goto(rm_exposition_3); break;
+}
+}
 </string>
           </argument>
         </arguments>
