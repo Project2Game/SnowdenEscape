@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>wall_buffer = 1;
+waiter = 0;
 </string>
           </argument>
         </arguments>
@@ -107,6 +108,7 @@ y += vspeed;
 x += hspeed;
 //Collsion with enemy
 if (distance_to_object(obj_guard) &lt; 9) {
+ global.reset_guards = 1;
  x=32;
  y=32;
  global.lvl_1_docs_collected=0;
@@ -120,6 +122,7 @@ if (distance_to_object(obj_guard) &lt; 9) {
     }
 }
 if (distance_to_object(obj_guard_path1) &lt; 9) {
+ global.reset_guards = 1;
  x=32;
  y=32;
  global.lvl_1_docs_collected=0;
@@ -133,6 +136,8 @@ if (distance_to_object(obj_guard_path1) &lt; 9) {
 }
 }
 if (distance_to_object(obj_guard_path2) &lt; 9) {
+ global.reset_guards = 1;
+
  x=32;
  y=32;
  global.lvl_1_docs_collected=0;
@@ -146,6 +151,7 @@ if (distance_to_object(obj_guard_path2) &lt; 9) {
 }
 }
 if (distance_to_object(obj_guard_path3) &lt; 9) {
+ global.reset_guards = 1;
  x=32;
  y=32;
  global.lvl_1_docs_collected=0;
@@ -160,6 +166,7 @@ if (distance_to_object(obj_guard_path3) &lt; 9) {
 }
 
 if (distance_to_object(obj_guard_path4) &lt; 9) {
+ global.reset_guards = 1;
  x=32;
  y=32;
  global.lvl_1_docs_collected=0;
@@ -174,6 +181,7 @@ if (distance_to_object(obj_guard_path4) &lt; 9) {
 }
 
 if (distance_to_object(obj_guard_path5) &lt; 9) {
+ global.reset_guards = 1;
  x=32;
  y=32;
  global.lvl_1_docs_collected=0;
@@ -188,6 +196,7 @@ if (distance_to_object(obj_guard_path5) &lt; 9) {
 }
 
 if (distance_to_object(obj_guard_path6) &lt; 9) {
+ global.reset_guards = 1;
  x=32;
  y=32;
  global.lvl_1_docs_collected=0;
@@ -202,6 +211,7 @@ if (distance_to_object(obj_guard_path6) &lt; 9) {
 }
 
 if (distance_to_object(obj_guard_path7) &lt; 9) {
+ global.reset_guards = 1;
  x=32;
  y=32;
  global.lvl_1_docs_collected=0;
@@ -216,6 +226,7 @@ if (distance_to_object(obj_guard_path7) &lt; 9) {
 }
 
 if (distance_to_object(obj_guard_path8) &lt; 9) {
+ global.reset_guards = 1;
  x=32;
  y=32;
  global.lvl_1_docs_collected=0;
@@ -230,6 +241,7 @@ if (distance_to_object(obj_guard_path8) &lt; 9) {
 }
 
 if (distance_to_object(obj_guard_path9) &lt; 9) {
+ global.reset_guards = 1;
  x=32;
  y=32;
  global.lvl_1_docs_collected=0;
@@ -244,6 +256,7 @@ if (distance_to_object(obj_guard_path9) &lt; 9) {
 }
 
 if (distance_to_object(obj_guard_path10) &lt; 9) {
+ global.reset_guards = 1;
  x=32;
  y=32;
  global.lvl_1_docs_collected=0;
@@ -258,6 +271,7 @@ if (distance_to_object(obj_guard_path10) &lt; 9) {
 }
 
 if (distance_to_object(obj_guard_path11) &lt; 9) {
+ global.reset_guards = 1;
  x=32;
  y=32;
  global.lvl_1_docs_collected=0;
@@ -269,6 +283,18 @@ if (distance_to_object(obj_guard_path11) &lt; 9) {
     case 1: room_goto(rm_exposition_2); break;
     case 2: room_goto(rm_exposition_3); break;
 }
+}
+
+
+//snap enemies back
+waiter = waiter + 1;
+if(waiter == 3)
+{
+waiter = 0; 
+if(global.reset_guards == 1)
+    {
+    global.reset_guards = 0;
+    }
 }
 </string>
           </argument>
