@@ -766,11 +766,11 @@ show_debug_message('doc_instance_count=' + string(instance_number(obj_document))
     <instance objName="obj_document" x="1792" y="416" name="inst_17D1ACE4" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="90"/>
     <instance objName="obj_guard" x="608" y="192" name="inst_822414C4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_guard_path1" x="880" y="80" name="inst_D23B20A8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_guard_path1" x="1360" y="64" name="inst_26A0B62A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="128" y="128" name="inst_95576C84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_document" x="96" y="96" name="inst_E6D2A192" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="128" y="128" name="inst_A4206D14" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_document" x="1216" y="672" name="inst_24384347" locked="0" code="" scaleX="0.5" scaleY="0.519999980926514" colour="4294967295" rotation="0"/>
+    <instance objName="obj_guard" x="1376" y="224" name="inst_11672124" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

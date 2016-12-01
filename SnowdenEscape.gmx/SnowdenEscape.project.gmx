@@ -94,6 +94,7 @@
     <object>objects\obj_radius</object>
     <object>objects\obj_los</object>
     <object>objects\obj_servers_in_room</object>
+    <object>objects\obj_guard_path1</object>
     <object>objects\obj_guard_path2</object>
     <object>objects\obj_guard_path3</object>
     <object>objects\obj_guard_path4</object>
@@ -104,7 +105,6 @@
     <object>objects\obj_guard_path9</object>
     <object>objects\obj_guard_path10</object>
     <object>objects\obj_guard_path11</object>
-    <object>objects\obj_guard_path1</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_splash</room>
