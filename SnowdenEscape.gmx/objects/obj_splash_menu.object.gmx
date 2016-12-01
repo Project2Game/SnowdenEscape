@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>/// Set menu options
 options[0] = "Play";
-options[1] = "Terminal";
-options[2] = "Quit";
+//options[1] = "Terminal";
+options[1] = "Quit";
 
 spacing = 64;        // spacing between each line
 selection = 0;  // menu item selection starts on option 0

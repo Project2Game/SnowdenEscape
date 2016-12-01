@@ -94,7 +94,7 @@ i_i = 0;
         <arguments>
           <argument>
             <kind>8</kind>
-            <path>rm_lvl_2_path1</path>
+            <path>-100</path>
           </argument>
           <argument>
             <kind>0</kind>
@@ -106,7 +106,7 @@ i_i = 0;
           </argument>
           <argument>
             <kind>4</kind>
-            <string>0</string>
+            <string>1</string>
           </argument>
         </arguments>
       </action>
@@ -607,11 +607,11 @@ if(i_i &gt; 50){
         <arguments>
           <argument>
             <kind>8</kind>
-            <path>rm_lvl_2_path1</path>
+            <path>-100</path>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>1.7</string>
+            <string>1.5</string>
           </argument>
           <argument>
             <kind>4</kind>
